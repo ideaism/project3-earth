@@ -3,13 +3,13 @@ const path = require("path");
 const sharp = require("sharp");
 const pptxgen = require("pptxgenjs");
 
-const ROOT = __dirname;
+const ROOT = path.resolve(__dirname, "..");
 const ASSET_DIR = path.join(ROOT, "assets");
 const SLIDES_DIR = path.join(ROOT, "slides");
 const PREVIEW_DIR = path.join(ROOT, "preview");
 const QA_DIR = path.join(ROOT, "qa");
 const OUTPUT_DIR = path.join(ROOT, "output");
-const OUT = path.join(OUTPUT_DIR, "a-website-that-tips-earth-story.pptx");
+const OUT = path.join(OUTPUT_DIR, "the-earth-written-by-us-earth-story-v1.pptx");
 
 for (const dir of [ASSET_DIR, SLIDES_DIR, PREVIEW_DIR, QA_DIR, OUTPUT_DIR]) {
   fs.mkdirSync(dir, { recursive: true });
@@ -157,7 +157,7 @@ const slides = [
     n: 1,
     svg: () => {
       const hero = imgData(path.join(ASSET_DIR, "title-earth-story.png"));
-      return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}<image href="${hero}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/><rect width="${W}" height="${H}" fill="url(#darkGrad)"/><text x="98" y="104" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="27" fill="#f6f0e6" letter-spacing="2">INTERACTIVE WEB PUBLICATION</text>${textBlock("A Website That Tips", 96, 265, 790, { size: 95, fill: C.white, weight: 780, maxChars: 15, lineHeight: 100 })}${textBlock("An Earth Story You Can Change", 100, 472, 700, { size: 38, fill: "#efe4ce", maxChars: 34, lineHeight: 46 })}<rect x="100" y="820" width="500" height="72" rx="36" fill="#f6f0e6" opacity=".92"/><text x="350" y="866" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="27" font-weight="700" fill="${C.ink}" text-anchor="middle">Project presentation deck</text></svg>`;
+      return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}<image href="${hero}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/><rect width="${W}" height="${H}" fill="url(#darkGrad)"/><text x="98" y="104" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="27" fill="#f6f0e6" letter-spacing="2">INTERACTIVE WEB PUBLICATION</text>${textBlock("The Earth, Written by Us", 96, 265, 900, { size: 86, fill: C.white, weight: 780, maxChars: 18, lineHeight: 92 })}${textBlock("An Earth Story You Can Change", 100, 520, 700, { size: 38, fill: "#efe4ce", maxChars: 34, lineHeight: 46 })}<rect x="100" y="820" width="500" height="72" rx="36" fill="#f6f0e6" opacity=".92"/><text x="350" y="866" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="27" font-weight="700" fill="${C.ink}" text-anchor="middle">Project presentation deck</text></svg>`;
     },
   },
   {
@@ -180,12 +180,12 @@ const slides = [
     svg: () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title("From World Earth Day Workshop to Story System", "Research context translated into interaction mechanics.", 4)}
       <circle cx="960" cy="610" r="150" fill="${C.ink}" opacity=".95" filter="url(#softShadow)"/><text x="960" y="595" text-anchor="middle" font-family="Inter, Arial" font-size="34" font-weight="760" fill="${C.white}">Story</text><text x="960" y="640" text-anchor="middle" font-family="Inter, Arial" font-size="34" font-weight="760" fill="${C.white}">System</text>
       ${[
-        ["positive tipping points", 430, 360, C.mint, C.green],
+        ["positive turning points", 430, 360, C.mint, C.green],
         ["systems thinking", 1240, 360, "#e7eef1", C.blue],
         ["small actions", 350, 755, "#fff1d6", C.amber],
         ["collective change", 1215, 755, "#f8dfd9", C.coral],
       ].map(([l, x, y, f, s]) => `${pill(x, y, l, f, s, 360)}<path d="M${x + 180} ${y + 58} Q960 ${y < 500 ? 470 : 760} 960 610" stroke="${s}" stroke-width="4" fill="none" opacity=".72"/>`).join("")}
-      ${textBlock("Workshop language becomes game logic: small choices accumulate, feedback is visible, and collective repair is treated as a possible tipping point.", 380, 890, 1160, { size: 33, fill: C.slate, maxChars: 70, lineHeight: 42 })}</svg>`,
+      ${textBlock("Workshop language becomes game logic: small choices accumulate, feedback is visible, and collective repair becomes a possible turning point.", 380, 890, 1160, { size: 33, fill: C.slate, maxChars: 70, lineHeight: 42 })}</svg>`,
   },
   {
     n: 5,
@@ -355,7 +355,7 @@ async function buildPptx() {
   pptx.layout = "LAYOUT_WIDE";
   pptx.author = "Codex";
   pptx.subject = "Interactive web publication project presentation";
-  pptx.title = "A Website That Tips";
+  pptx.title = "The Earth, Written by Us";
   pptx.company = "MACD";
   pptx.lang = "en-GB";
   pptx.theme = {

@@ -1,11 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
+const pptxgen = require("pptxgenjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const ASSET_DIR = path.join(ROOT, "assets");
 const PROTO_DIR = path.join(ASSET_DIR, "prototype");
 const WORKSHOP_DIR = path.join(ASSET_DIR, "workshop");
+const USER_TESTING_DIR = path.join(ASSET_DIR, "user-testing");
 const SLIDES_DIR = path.join(ROOT, "slides-v2");
 const QA_DIR = path.join(ROOT, "qa");
 const OUTPUT_DIR = path.join(ROOT, "output");
@@ -14,6 +16,7 @@ for (const dir of [ASSET_DIR, SLIDES_DIR, QA_DIR, OUTPUT_DIR]) fs.mkdirSync(dir,
 const W = 1920;
 const H = 1080;
 const OUT = path.join(OUTPUT_DIR, "the-earth-written-by-us-radical-earth.html");
+const PPTX_OUT = path.join(OUTPUT_DIR, "the-earth-written-by-us-earth-story-v2.pptx");
 
 const C = {
   ink: "#10212b",
@@ -182,10 +185,10 @@ const slides = [
   () => {
     const start = imgData(path.join(PROTO_DIR, "02-story-start.png"));
     const ending = imgData(path.join(PROTO_DIR, "07-organise.png"));
-    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(8, "Interface design", "The prototype uses a two-part reading interface.")}
+    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(8, "Interface design", "Testing showed some labels were unclear, so the next iteration uses state-first language.")}
     <image href="${start}" x="95" y="350" width="800" height="535" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
     <image href="${ending}" x="1025" y="350" width="800" height="535" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
-    ${pill(190, 900, "Living Earth + variables", C.mint, C.green, 360)}${pill(1125, 900, "Storybook dialogue + ending card", "#fff1d6", C.amber, 470)}</svg>`;
+    ${pill(190, 900, "Living Earth + variables", C.mint, C.green, 360)}${pill(1125, 900, "Keyword panel + ending result", "#fff1d6", C.amber, 440)}</svg>`;
   },
   () => {
     const img = imgData(earthStates);
@@ -202,8 +205,8 @@ const slides = [
     ${pill(135, 585, "reader keyword", "#fff1d6", C.amber, 300)}
     ${[["repair", 520, 365, "community care", 880, 325, "regenerative ending", 1260, 325, C.green], ["plant", 520, 525, "biodiversity", 880, 525, "blooming ending", 1260, 525, C.green], ["consume", 520, 685, "waste", 880, 725, "collapse ending", 1260, 725, C.coral], ["technology", 520, 845, "efficiency", 880, 895, "unequal green future", 1260, 895, C.blue]].map(([a, ax, ay, b, bx, by, c, cx, cy, col]) => `${pill(ax, ay, a, "#fffaf1", col, 235)}${pill(bx, by, b, "#fffaf1", col, 300)}${pill(cx, cy, c, "#fffaf1", col, 390)}${arrow(435, 612, ax, ay + 27, col)}${arrow(ax + 235, ay + 27, bx, by + 27, col)}${arrow(bx + 300, by + 27, cx, cy + 27, col)}`).join("")}</svg>`,
   () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(12, "Possible endings / ending card", "The final output is a personal publication record.")}
-    ${[["Regenerative Earth", "Repair becomes a repeated pattern strong enough to change the weather of the story.", C.green], ["Fragile Balance", "The Earth remains between two futures, still listening for what repeats.", C.amber], ["Technological Green Future", "Cleaner machines help, but justice and care still decide who benefits.", C.blue], ["Unequal Survival", "Some places are protected while others carry the heat.", C.coral], ["Collapse Story", "The last page records the cost of delayed care.", C.red]].map((e, i) => {
-      const x = 110 + (i % 3) * 590;
+    ${[["Regenerative Earth", "Repair becomes a repeated pattern strong enough to change the weather of the story.", C.green], ["Fragile Balance", "The Earth remains between two futures, still listening for what repeats.", C.amber], ["Technological Green Future", "Cleaner machines help, but justice and care still decide who benefits.", C.blue], ["Unequal Survival", "Some places are protected while others carry the heat.", C.coral], ["Collapse", "The last page records the cost of delayed care.", C.red]].map((e, i) => {
+      const x = i < 3 ? 110 + (i % 3) * 590 : 110 + (i - 3) * 910;
       const y = i < 3 ? 350 : 675;
       const w = i < 3 ? 520 : 800;
       return card(x, y, w, 240, `<circle cx="${x + 54}" cy="${y + 58}" r="18" fill="${e[2]}"/><text x="${x + 92}" y="${y + 70}" font-family="Inter, Arial" font-size="30" font-weight="780" fill="${C.ink}">${esc(e[0])}</text>${t(e[1], x + 52, y + 132, w - 100, { size: 27, fill: C.slate, maxChars: i < 3 ? 33 : 52, lineHeight: 35 })}`, "#fffaf1");
@@ -215,12 +218,13 @@ const slides = [
       return card(x, y, 700, 115, `<text x="${x + 46}" y="${y + 70}" font-family="Inter, Arial" font-size="30" font-weight="650" fill="${C.ink}">${esc(d)}</text>`, i % 2 ? "#f3f8f0" : "#fff8ea");
     }).join("")}</svg>`,
   () => {
-    const landing = imgData(path.join(PROTO_DIR, "01-landing.png"));
-    const ending = imgData(path.join(PROTO_DIR, "07-organise.png"));
-    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(14, "Prototype / final build evidence", "Current build evidence: desktop prototype, story engine, variable system and ending card.")}
-    <image href="${landing}" x="105" y="355" width="740" height="500" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
-    <image href="${ending}" x="1030" y="355" width="740" height="500" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
-    ${pill(205, 885, "working React prototype", C.mint, C.green, 390)}${pill(1070, 885, "5-round path + ending output", "#fff1d6", C.amber, 440)}${t("Fixes made from feedback: 6 Earth states and 13 highlighted keywords are now consistent across slides.", 460, 995, 1000, { size: 28, fill: C.slate, maxChars: 72 })}</svg>`;
+    const landing = imgData(path.join(USER_TESTING_DIR, "user-test-landing-slide.jpg"));
+    const flow = imgData(path.join(USER_TESTING_DIR, "user-test-interface-slide.jpg"));
+    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(14, "User testing / iteration evidence", "Two readers tested the prototype and identified unclear interface language.")}
+    <image href="${landing}" x="95" y="380" width="790" height="405" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    <image href="${flow}" x="1035" y="380" width="790" height="405" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    ${card(150, 825, 760, 180, `${t("Observed issue", 195, 885, 500, { size: 31, weight: 800 })}${t("Interface labels and ending wording felt ambiguous.", 195, 940, 610, { size: 26, fill: C.slate, maxChars: 49, lineHeight: 33 })}`, "#fff8ea")}
+    ${card(1010, 825, 760, 180, `${t("Iteration decision", 1055, 885, 500, { size: 31, weight: 800 })}${t("Rename “Collapse Story” to “Collapse” and make state labels clearer.", 1055, 940, 610, { size: 26, fill: C.slate, maxChars: 50, lineHeight: 33 })}`, "#f2f8f0")}</svg>`;
   },
   () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(15, "Final deliverables checklist", "This page now maps directly to the brief requirements.")}
     ${["Interactive website prototype: local build + deployment link / QR", "Demo video: 1–2 minutes showing a complete reading path", "Story system map: keyword → variable → branch → ending", "UI screens: desktop and exhibition encounter view", "Ending cards / receipts: digital and/or printed mockups", "Process document: sketches, workshop notes, iterations", "Written reflection: audience, context, format, Radical Earth response"].map((d, i) => {
@@ -247,6 +251,34 @@ async function contactSheet() {
     comps.push({ input, left: ((i - 1) % 4) * tw, top: Math.floor((i - 1) / 4) * th });
   }
   await sharp({ create: { width: tw * 4, height: th * 4, channels: 4, background: C.paper } }).composite(comps).png().toFile(path.join(QA_DIR, "contact-sheet-v2.png"));
+}
+
+async function buildPptx() {
+  const pptx = new pptxgen();
+  pptx.author = "Codex";
+  pptx.subject = "Radical Earth interactive web publication";
+  pptx.title = "The Earth, Written by Us";
+  pptx.company = "MACD";
+  pptx.lang = "en-GB";
+  pptx.theme = {
+    headFontFace: "Aptos Display",
+    bodyFontFace: "Aptos",
+    lang: "en-GB",
+  };
+  pptx.defineLayout({ name: "CUSTOM_WIDE", width: 13.333333, height: 7.5 });
+  pptx.layout = "CUSTOM_WIDE";
+  for (let i = 1; i <= slides.length; i += 1) {
+    const slide = pptx.addSlide();
+    slide.background = { color: "F6F0E6" };
+    slide.addImage({
+      path: path.join(SLIDES_DIR, `slide-${String(i).padStart(2, "0")}.png`),
+      x: 0,
+      y: 0,
+      w: 13.333333,
+      h: 7.5,
+    });
+  }
+  await pptx.writeFile({ fileName: PPTX_OUT });
 }
 
 function html() {
@@ -428,6 +460,8 @@ Already added:
 - Earth Day Experiment Log 04: Power of Positive Tipping Points / Systems Games Workshop.
 - Workshop date/place/focus: 22 April 2026, West Side Lecture Theatre, systems thinking, tipping points, adaptation, feedback.
 - Workshop process photos showing floor-card participation, group activity, positive tipping points, feedback loops and complex-system slides.
+- User testing photos showing the prototype being used on laptop.
+- User feedback added: some interface meanings were unclear; simplify ending language from "Collapse Story" to "Collapse".
 
 1. Original given content
    - Title / author / source of the assigned text.
@@ -440,8 +474,8 @@ Already added:
    - A short paragraph explaining why the text is edited into an interactive story rather than reproduced in full.
 
 3. Process and iteration evidence
-   - Early sketches, failed UI versions, system diagrams, paper prototypes beyond the Earth Day workshop evidence.
-   - User testing notes or peer feedback.
+   - Early sketches, failed UI versions, system diagrams, paper prototypes beyond the Earth Day workshop and user-testing evidence.
+   - More detailed user testing notes: who tested, task given, exact quotes, what changed after each test.
    - Before/after screenshots showing what changed.
 
 4. Final publication evidence
@@ -462,6 +496,8 @@ Already added:
   missingList();
   await renderSlides();
   await contactSheet();
+  await buildPptx();
   html();
   console.log(OUT);
+  console.log(PPTX_OUT);
 })();

@@ -1,7 +1,7 @@
-import actions from '../data/actions.json';
-import endings from '../data/endings.json';
-import story from '../data/story.json';
-import visualStates from '../data/visualStates.json';
+import actions from '../data/actions.json' with { type: 'json' };
+import endings from '../data/endings.json' with { type: 'json' };
+import story from '../data/story.json' with { type: 'json' };
+import visualStates from '../data/visualStates.json' with { type: 'json' };
 
 export const MAX_ROUNDS = 5;
 
@@ -13,7 +13,7 @@ export const INITIAL_VARIABLES = {
   justice: 35,
   waste: 45,
   hope: 40,
-  tippingScore: 0
+  futureMomentum: 0
 };
 
 const variableKeys = Object.keys(INITIAL_VARIABLES);
@@ -44,7 +44,7 @@ export function getBranchPrompt(round) {
 }
 
 export function normalizeInput(input) {
-  return input.toLowerCase().trim().replace(/\s+/g, ' ');
+  return String(input ?? '').toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
 export function findAction(input) {
@@ -82,15 +82,23 @@ export function applyEffects(variables, effects = {}) {
 export function determineEarthState(variables, action) {
   if (variables.earthHealth <= 20 || variables.waste >= 80) return 'collapsing';
   if (variables.temperature >= 70) return 'warming';
-  if (variables.tippingScore >= 30 && variables.earthHealth >= 60) return 'tipping';
+  if (variables.futureMomentum >= 30 && variables.earthHealth >= 60) return 'turning';
   if (variables.communityCare >= 65) return 'collective';
   if (variables.biodiversity >= 65) return 'blooming';
-  if (action?.preferredEarthState && action.preferredEarthState !== 'fragile') {
-    return action.preferredEarthState;
+  if (variables.earthHealth >= 60 && variables.waste <= 40) return 'repairing';
+  if (variables.biodiversity <= 35 || variables.hope <= 25) return 'silent';
+
+  if (action?.preferredEarthState === 'warming' && (variables.temperature >= 55 || variables.waste >= 60)) {
+    return 'warming';
   }
-  if (action?.preferredEarthState === 'repairing' && variables.earthHealth >= 45) return 'repairing';
-  if (action?.preferredEarthState === 'silent' && variables.biodiversity <= 35) return 'silent';
-  if (action?.preferredEarthState === 'warming' && variables.temperature >= 55) return 'warming';
+  if (action?.preferredEarthState === 'collective' && variables.communityCare >= 55) return 'collective';
+  if (action?.preferredEarthState === 'blooming' && variables.biodiversity >= 55) return 'blooming';
+  if (action?.preferredEarthState === 'repairing' && (variables.earthHealth >= 50 || variables.waste <= 40)) {
+    return 'repairing';
+  }
+  if (action?.preferredEarthState === 'silent' && (variables.biodiversity <= 40 || variables.hope <= 35)) {
+    return 'silent';
+  }
   return 'fragile';
 }
 
@@ -110,6 +118,13 @@ export function selectStoryResponse(action, round, fallbackIndex = 0) {
   };
 }
 
+function getFallbackResponse(id, fallbackIndex = 0) {
+  return (
+    story.fallbackResponses.find((response) => response.id === id) ??
+    story.fallbackResponses[fallbackIndex % story.fallbackResponses.length]
+  );
+}
+
 export function determineEnding(variables, history) {
   const counts = countActionCategories(history);
   const selected = history.map((item) => item.keyword);
@@ -124,16 +139,24 @@ export function determineEnding(variables, history) {
     return getEnding('collapse-story');
   }
 
-  if (variables.earthHealth >= 50 && variables.justice <= 35 && hasUnequalPath) {
-    return getEnding('unequal-survival');
-  }
-
-  if (variables.earthHealth >= 65 && variables.tippingScore >= 25 && variables.waste <= 45) {
+  if (
+    variables.earthHealth >= 65 &&
+    variables.communityCare >= 55 &&
+    variables.justice >= 50 &&
+    variables.futureMomentum >= 25 &&
+    variables.waste <= 45 &&
+    counts.positive >= 4 &&
+    counts.negative === 0
+  ) {
     return getEnding('regenerative-earth');
   }
 
   if (hasTechnologyPath && (variables.communityCare <= 40 || variables.justice <= 40)) {
     return getEnding('technological-green-future');
+  }
+
+  if (variables.earthHealth >= 50 && variables.justice <= 35 && hasUnequalPath) {
+    return getEnding('unequal-survival');
   }
 
   return getEnding('fragile-balance');
@@ -174,27 +197,39 @@ export function createInitialAppState() {
 }
 
 export function submitKeyword(currentState, rawInput) {
-  const action = findAction(rawInput);
+  const normalizedInput = normalizeInput(rawInput);
+  const action = findAction(normalizedInput);
   const previousEarthState = currentState.earthState;
-  const nextRound = currentState.round + 1;
   const fallbackIndex = currentState.history.length;
+
+  if (!action) {
+    const response = getFallbackResponse(normalizedInput ? 'fallback-unrecognised' : 'fallback-empty', fallbackIndex);
+
+    return {
+      ...currentState,
+      currentStoryText: response.response,
+      currentEarthVoice: response.earthVoice,
+      currentPrompt: response.nextPrompt,
+      lastAction: null,
+      feedbackMessage: response.systemFeedback,
+      systemFeedback: response.systemFeedback
+    };
+  }
+
+  const nextRound = currentState.round + 1;
   const response = selectStoryResponse(action, currentState.round, fallbackIndex);
-  const nextVariables = action
-    ? applyEffects(currentState.variables, action.effects)
-    : { ...currentState.variables };
-  const nextEarthState = action
-    ? determineEarthState(nextVariables, action)
-    : currentState.earthState;
+  const nextVariables = applyEffects(currentState.variables, action.effects);
+  const nextEarthState = determineEarthState(nextVariables, action);
 
   const historyItem = {
     round: nextRound,
     input: rawInput,
-    keyword: action?.id ?? 'unknown',
-    label: normalizeInput(rawInput) || action?.label || 'unknown',
-    category: action?.category ?? 'unknown',
+    keyword: action.id,
+    label: normalizedInput || action.label,
+    category: action.category,
     earthStateBefore: previousEarthState,
     earthStateAfter: nextEarthState,
-    responseId: action ? action.id : response.id ?? 'fallback',
+    responseId: action.id,
     variablesAfter: nextVariables
   };
 

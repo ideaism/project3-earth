@@ -7,7 +7,7 @@
     "summary": "The Earth did not become perfect. It became connected again. Every small action found another, until repair became a pattern strong enough to change the weather of the story.",
     "earthVoice": "I was not saved by one word. I was changed by what kept returning.",
     "reflectionPrompt": "Which action could become a pattern in your own community?",
-    "visualState": "tipping",
+    "visualState": "turning",
     "commonKeywords": [
       "repair",
       "share",
@@ -20,7 +20,7 @@
     "id": "fragile-balance",
     "title": "Fragile Balance",
     "priority": 2,
-    "conditionDescription": "Mixed variables, no extreme collapse, limited positive tipping.",
+    "conditionDescription": "Mixed variables, no extreme collapse, limited positive momentum.",
     "summary": "The Earth remains between two futures. Some wounds soften. Some heat stays. The story is not saved, not lost, and still listening for what repeats next.",
     "earthVoice": "I am not finished. Neither is your story.",
     "reflectionPrompt": "What would move this balance toward repair?",
@@ -69,7 +69,7 @@
   },
   {
     "id": "collapse-story",
-    "title": "Collapse Story",
+    "title": "Collapse",
     "priority": 5,
     "conditionDescription": "Very low earthHealth, high waste, high temperature, repeated negative keywords.",
     "summary": "The Earth does not end in one moment. It frays through postponed decisions, hidden wounds, and warnings heard too late. Even here, the last page asks what pattern must stop first.",

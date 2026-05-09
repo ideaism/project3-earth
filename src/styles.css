@@ -273,6 +273,7 @@ h3 {
 .earth-orbit {
   position: relative;
   display: grid;
+  isolation: isolate;
   width: min(78vw, 470px);
   aspect-ratio: 1;
   place-items: center;
@@ -281,8 +282,22 @@ h3 {
   animation: orbit-pulse 700ms ease-out;
 }
 
+.earth-orbit::before {
+  position: absolute;
+  z-index: 0;
+  width: 74%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 248, 234, 0.52), transparent 56%),
+    radial-gradient(circle, rgba(127, 174, 178, 0.32), transparent 68%);
+  filter: blur(2px);
+}
+
 .earth-orbit::after {
   position: absolute;
+  z-index: 1;
   width: 86%;
   aspect-ratio: 1;
   content: "";
@@ -293,19 +308,36 @@ h3 {
 
 .earth-image {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   width: 78%;
   filter: drop-shadow(0 32px 32px rgba(34, 28, 22, 0.24));
 }
 
 .earth-effect {
   position: absolute;
-  z-index: 3;
   width: 88%;
   max-width: 470px;
   opacity: 0.72;
   pointer-events: none;
   mix-blend-mode: multiply;
+}
+
+.earth-effect-1 {
+  z-index: 2;
+  width: 94%;
+  opacity: 0.58;
+}
+
+.earth-effect-2 {
+  z-index: 5;
+  width: 84%;
+  opacity: 0.72;
+}
+
+.earth-effect-3 {
+  z-index: 6;
+  width: 72%;
+  opacity: 0.62;
 }
 
 .earth-animation-heat .earth-effect,
@@ -318,6 +350,22 @@ h3 {
 .earth-animation-radiate .earth-effect,
 .earth-animation-mend .earth-effect {
   mix-blend-mode: screen;
+}
+
+.earth-animation-radiate .earth-effect-1,
+.earth-animation-glow .earth-effect-1,
+.earth-animation-mend .earth-effect-1 {
+  z-index: 1;
+  width: 108%;
+  opacity: 0.54;
+}
+
+.earth-animation-radiate .earth-effect-2,
+.earth-animation-glow .earth-effect-2,
+.earth-animation-mend .earth-effect-2 {
+  z-index: 5;
+  width: 90%;
+  opacity: 0.7;
 }
 
 .earth-animation-fade .earth-image {
@@ -494,13 +542,7 @@ blockquote {
   font-weight: 800;
 }
 
-.keyword-form {
-  display: grid;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.keyword-form label,
+.choice-prompt,
 .recent-path h3,
 .branch-panel h3 {
   color: #273932;
@@ -508,19 +550,8 @@ blockquote {
   font-weight: 900;
 }
 
-.input-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-
-.input-row input {
-  min-width: 0;
-  min-height: 46px;
-  border: 1px solid rgba(32, 28, 24, 0.3);
-  border-radius: var(--radius);
-  padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.54);
-  color: var(--ink);
+.choice-prompt {
+  margin: 22px 0 0;
 }
 
 .chip-section {
@@ -673,7 +704,7 @@ blockquote {
   --earth-panel-bg: #e6d69b;
 }
 
-.earth-tipping {
+.earth-turning {
   --earth-panel-bg: #c9f2ed;
 }
 
@@ -752,17 +783,12 @@ blockquote {
     width: min(82vw, 330px);
   }
 
-  .input-row,
   .primary-button,
   .secondary-button,
   .text-button,
   .action-chip,
   .choice-chip {
     width: 100%;
-  }
-
-  .input-row {
-    grid-template-columns: 1fr;
   }
 
   .recent-path li {

@@ -1,14 +1,8 @@
 const ARCHIVE_KEY = 'the-earth-written-by-us-archive';
-const LEGACY_ARCHIVE_KEYS = ['earth-at-the-threshold-archive', 'a-website-that-tips-archive'];
 
 export function loadArchive() {
   try {
-    const rawArchive = window.localStorage.getItem(ARCHIVE_KEY) ?? LEGACY_ARCHIVE_KEYS
-      .map((key) => window.localStorage.getItem(key))
-      .find(Boolean);
-    if (rawArchive && !window.localStorage.getItem(ARCHIVE_KEY)) {
-      window.localStorage.setItem(ARCHIVE_KEY, rawArchive);
-    }
+    const rawArchive = window.localStorage.getItem(ARCHIVE_KEY);
     return {
       available: true,
       entries: rawArchive ? JSON.parse(rawArchive) : [],
@@ -45,7 +39,6 @@ export function saveArchiveEntry(entry) {
 export function clearArchiveEntries() {
   try {
     window.localStorage.removeItem(ARCHIVE_KEY);
-    LEGACY_ARCHIVE_KEYS.forEach((key) => window.localStorage.removeItem(key));
     return {
       available: true,
       entries: [],

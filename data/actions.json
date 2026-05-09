@@ -24,7 +24,7 @@
       "justice": 2,
       "waste": -8,
       "hope": 7,
-      "tippingScore": 6
+      "futureMomentum": 6
     },
     "preferredEarthState": "repairing"
   },
@@ -53,7 +53,7 @@
       "justice": 1,
       "waste": -1,
       "hope": 6,
-      "tippingScore": 5
+      "futureMomentum": 5
     },
     "preferredEarthState": "blooming"
   },
@@ -83,7 +83,7 @@
       "justice": 6,
       "waste": -4,
       "hope": 6,
-      "tippingScore": 6
+      "futureMomentum": 6
     },
     "preferredEarthState": "collective"
   },
@@ -110,7 +110,7 @@
       "justice": 7,
       "waste": -2,
       "hope": 5,
-      "tippingScore": 4
+      "futureMomentum": 4
     },
     "preferredEarthState": "fragile"
   },
@@ -141,7 +141,7 @@
       "justice": 2,
       "waste": -10,
       "hope": 5,
-      "tippingScore": 5
+      "futureMomentum": 5
     },
     "preferredEarthState": "repairing"
   },
@@ -171,7 +171,7 @@
       "justice": 5,
       "waste": -2,
       "hope": 7,
-      "tippingScore": 5
+      "futureMomentum": 5
     },
     "preferredEarthState": "collective"
   },
@@ -202,7 +202,7 @@
       "justice": 10,
       "waste": 0,
       "hope": 4,
-      "tippingScore": 6
+      "futureMomentum": 6
     },
     "preferredEarthState": "collective"
   },
@@ -229,7 +229,7 @@
       "justice": 2,
       "waste": 0,
       "hope": 3,
-      "tippingScore": 2
+      "futureMomentum": 2
     },
     "preferredEarthState": "fragile"
   },
@@ -258,7 +258,7 @@
       "justice": 2,
       "waste": -3,
       "hope": 6,
-      "tippingScore": 7
+      "futureMomentum": 7
     },
     "preferredEarthState": "blooming"
   },
@@ -285,7 +285,7 @@
       "justice": 9,
       "waste": -1,
       "hope": 6,
-      "tippingScore": 8
+      "futureMomentum": 8
     },
     "preferredEarthState": "collective"
   },
@@ -312,7 +312,7 @@
       "justice": 1,
       "waste": -9,
       "hope": 5,
-      "tippingScore": 5
+      "futureMomentum": 5
     },
     "preferredEarthState": "blooming"
   },
@@ -340,7 +340,7 @@
       "justice": -8,
       "waste": 15,
       "hope": -8,
-      "tippingScore": -8
+      "futureMomentum": -8
     },
     "preferredEarthState": "warming"
   },
@@ -371,7 +371,7 @@
       "justice": -4,
       "waste": 12,
       "hope": -5,
-      "tippingScore": -5
+      "futureMomentum": -5
     },
     "preferredEarthState": "warming"
   },
@@ -399,7 +399,7 @@
       "justice": -5,
       "waste": 8,
       "hope": -8,
-      "tippingScore": -6
+      "futureMomentum": -6
     },
     "preferredEarthState": "silent"
   },
@@ -429,7 +429,7 @@
       "justice": -2,
       "waste": 12,
       "hope": -5,
-      "tippingScore": -4
+      "futureMomentum": -4
     },
     "preferredEarthState": "warming"
   },
@@ -456,7 +456,7 @@
       "justice": -4,
       "waste": 5,
       "hope": -6,
-      "tippingScore": -4
+      "futureMomentum": -4
     },
     "preferredEarthState": "warming"
   },
@@ -483,7 +483,7 @@
       "justice": -10,
       "waste": 10,
       "hope": -8,
-      "tippingScore": -7
+      "futureMomentum": -7
     },
     "preferredEarthState": "silent"
   },
@@ -510,7 +510,7 @@
       "justice": -5,
       "waste": 3,
       "hope": -8,
-      "tippingScore": -5
+      "futureMomentum": -5
     },
     "preferredEarthState": "fragile"
   },
@@ -537,7 +537,7 @@
       "justice": -4,
       "waste": 8,
       "hope": -5,
-      "tippingScore": -5
+      "futureMomentum": -5
     },
     "preferredEarthState": "warming"
   },
@@ -564,7 +564,7 @@
       "justice": -2,
       "waste": 10,
       "hope": -4,
-      "tippingScore": -4
+      "futureMomentum": -4
     },
     "preferredEarthState": "warming"
   },
@@ -591,7 +591,7 @@
       "justice": -5,
       "waste": 2,
       "hope": -3,
-      "tippingScore": -3
+      "futureMomentum": -3
     },
     "preferredEarthState": "fragile"
   },
@@ -621,7 +621,7 @@
       "justice": -5,
       "waste": -3,
       "hope": 2,
-      "tippingScore": 4
+      "futureMomentum": 4
     },
     "preferredEarthState": "repairing"
   },
@@ -650,7 +650,7 @@
       "justice": -6,
       "waste": -2,
       "hope": 3,
-      "tippingScore": 4
+      "futureMomentum": 4
     },
     "preferredEarthState": "blooming"
   },
@@ -680,7 +680,7 @@
       "justice": -3,
       "waste": -5,
       "hope": 2,
-      "tippingScore": 4
+      "futureMomentum": 4
     },
     "preferredEarthState": "repairing"
   },
@@ -707,7 +707,7 @@
       "justice": 2,
       "waste": 0,
       "hope": 2,
-      "tippingScore": 2
+      "futureMomentum": 2
     },
     "preferredEarthState": "fragile"
   },
@@ -734,7 +734,7 @@
       "justice": 0,
       "waste": 4,
       "hope": 1,
-      "tippingScore": 0
+      "futureMomentum": 0
     },
     "preferredEarthState": "fragile"
   }

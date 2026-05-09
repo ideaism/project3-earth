@@ -165,6 +165,7 @@ function StoryScreen({ appState, onSubmitKeyword, onViewArchive, onHome }) {
 
 function EarthVisual({ earthState, variables, feedbackMessage }) {
   const visualState = getVisualState(earthState);
+  const fallbackEarthAsset = '/assets/earth/earth-fragile.png';
   const meters = variables
     ? [
         ['Health', variables.earthHealth],
@@ -182,9 +183,26 @@ function EarthVisual({ earthState, variables, feedbackMessage }) {
       key={`${earthState}-${feedbackMessage}`}
     >
       <div className="earth-orbit" aria-hidden="true">
-        <img className="earth-image" src={visualState.assetPath} alt="" />
-        {(visualState.effectAssets ?? []).map((assetPath) => (
-          <img className="earth-effect" src={assetPath} alt="" key={assetPath} />
+        <img
+          className="earth-image"
+          src={visualState.assetPath}
+          alt=""
+          onError={(event) => {
+            if (!event.currentTarget.src.endsWith(fallbackEarthAsset)) {
+              event.currentTarget.src = fallbackEarthAsset;
+            }
+          }}
+        />
+        {(visualState.effectAssets ?? []).map((assetPath, index) => (
+          <img
+            className={`earth-effect earth-effect-${index + 1}`}
+            src={assetPath}
+            alt=""
+            key={assetPath}
+            onError={(event) => {
+              event.currentTarget.remove();
+            }}
+          />
         ))}
       </div>
       <div className="earth-caption">
@@ -240,7 +258,7 @@ function StoryPanel({ appState, onSubmitKeyword, onViewArchive, onHome }) {
         {appState.systemFeedback && <p className="system-feedback">{appState.systemFeedback}</p>}
       </article>
 
-      <KeywordInput prompt={appState.currentPrompt} onSubmitKeyword={onSubmitKeyword} />
+      <p className="choice-prompt">{appState.currentPrompt}</p>
       <ActionChips actions={getSuggestedActions()} onSubmitKeyword={onSubmitKeyword} />
 
       {branchPrompt && (
@@ -306,47 +324,6 @@ function ProgressIndicator({ round, maxRounds }) {
         })}
       </div>
     </div>
-  );
-}
-
-function KeywordInput({ prompt, onSubmitKeyword }) {
-  const [value, setValue] = useState('');
-
-  function submitValue() {
-    const trimmedValue = value.trim();
-    if (!trimmedValue) return;
-    onSubmitKeyword(trimmedValue);
-    setValue('');
-  }
-
-  function submit(event) {
-    event.preventDefault();
-    submitValue();
-  }
-
-  function handleKeyDown(event) {
-    if (event.key !== 'Enter') return;
-    event.preventDefault();
-    submitValue();
-  }
-
-  return (
-    <form className="keyword-form" onSubmit={submit}>
-      <label htmlFor="keyword-input">{prompt}</label>
-      <div className="input-row">
-        <input
-          id="keyword-input"
-          type="text"
-          value={value}
-          placeholder="Type repair, plant, consume..."
-          onChange={(event) => setValue(event.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <button className="primary-button" type="submit">
-          Submit
-        </button>
-      </div>
-    </form>
   );
 }
 

@@ -53,7 +53,7 @@
     {
       "id": "chapter-4",
       "number": 4,
-      "title": "The Tipping Moment",
+      "title": "The Turning Point",
       "purpose": "Bring the story to a threshold where repeated choices matter.",
       "transition": "The Earth leans toward the future that has been practiced."
     },
@@ -379,7 +379,7 @@
       "chapterRange": [1, 5],
       "narrative": "The scattered good intentions find a table, a plan, and a shared hour.",
       "earthVoice": "Care becomes stronger when it learns how to meet again.",
-      "systemFeedback": "Organising raises community care, justice, and tipping score.",
+      "systemFeedback": "Organising raises community care, justice, and shared future momentum.",
       "nextPrompt": "Who needs to be gathered for the next change?"
     },
     {
@@ -427,7 +427,7 @@
       "chapterRange": [1, 5],
       "narrative": "The decision is placed gently into tomorrow. Tomorrow grows heavier.",
       "earthVoice": "I can wait for seasons, but not for endless postponement.",
-      "systemFeedback": "Delay raises tipping risk and weakens hope.",
+      "systemFeedback": "Delay raises threshold risk and weakens hope.",
       "nextPrompt": "What small action could happen before later arrives?"
     },
     {
@@ -534,7 +534,7 @@
       "prompt": "A broken tool lies between repair and replacement. What happens to it?",
       "choices": ["repair", "share", "discard", "consume"],
       "emotionalTone": "Practical, intimate, small-scale.",
-      "endingSupportNotes": "Repair and share build tipping score. Discard and consume increase waste and warming."
+      "endingSupportNotes": "Repair and share build shared future momentum. Discard and consume increase waste and warming."
     },
     {
       "id": "branch-forest-edge",
@@ -561,13 +561,13 @@
       "summary": "The Earth did not become perfect. It became connected again. Every small action found another, until repair became a pattern strong enough to change the weather of the story.",
       "earthVoice": "I was not saved by one word. I was changed by what kept returning.",
       "reflectionPrompt": "Which action could become a pattern in your own community?",
-      "suggestedFinalVisualState": "tipping",
+      "suggestedFinalVisualState": "turning",
       "commonKeywords": ["repair", "share", "organise", "restore", "plant"]
     },
     {
       "id": "fragile-balance",
       "title": "Fragile Balance",
-      "condition": "Mixed variables, no extreme collapse, limited positive tipping.",
+      "condition": "Mixed variables, no extreme collapse, limited positive momentum.",
       "summary": "The Earth remains between two futures. Some wounds soften. Some heat stays. The story is not saved, not lost, and still listening for what repeats next.",
       "earthVoice": "I am not finished. Neither is your story.",
       "reflectionPrompt": "What would move this balance toward repair?",

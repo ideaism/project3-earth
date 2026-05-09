@@ -4,6 +4,8 @@ Already added:
 - Earth Day Experiment Log 04: Power of Positive Tipping Points / Systems Games Workshop.
 - Workshop date/place/focus: 22 April 2026, West Side Lecture Theatre, systems thinking, tipping points, adaptation, feedback.
 - Workshop process photos showing floor-card participation, group activity, positive tipping points, feedback loops and complex-system slides.
+- User testing photos showing the prototype being used on laptop.
+- User feedback added: some interface meanings were unclear; simplify ending language from "Collapse Story" to "Collapse".
 
 1. Original given content
    - Title / author / source of the assigned text.
@@ -16,8 +18,8 @@ Already added:
    - A short paragraph explaining why the text is edited into an interactive story rather than reproduced in full.
 
 3. Process and iteration evidence
-   - Early sketches, failed UI versions, system diagrams, paper prototypes beyond the Earth Day workshop evidence.
-   - User testing notes or peer feedback.
+   - Early sketches, failed UI versions, system diagrams, paper prototypes beyond the Earth Day workshop and user-testing evidence.
+   - More detailed user testing notes: who tested, task given, exact quotes, what changed after each test.
    - Before/after screenshots showing what changed.
 
 4. Final publication evidence

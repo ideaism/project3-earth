@@ -1,0 +1,15 @@
+Task mode: create
+Primary deck profile: consumer-retail / image-led design presentation
+Source: /Users/beijixinfei/Downloads/03_Publishing_Forms(1) (1).pdf
+
+Brief interpretation:
+- Publish and activate content beyond the static printed page.
+- Treat publishing as an event, interface, space, system, performance or hybrid format.
+- Make the audience encounter, respond, assemble, annotate, perform or participate.
+- Align the publishing form with Radical Earth: ecology, justice, repair and collective change.
+
+Generated image assets copied from Codex imagegen:
+- assets/title-earth-story.png
+- assets/earth-states-generated.png
+
+Deck structure follows the user-provided 16-slide outline.

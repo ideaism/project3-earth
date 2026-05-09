@@ -68,14 +68,14 @@
     ]
   },
   {
-    "id": "tipping",
-    "name": "Tipping Earth",
-    "assetPath": "/assets/earth/earth-tipping.png",
-    "backgroundClass": "earth-tipping",
+    "id": "turning",
+    "name": "Turning Earth",
+    "assetPath": "/assets/earth/earth-turning.png",
+    "backgroundClass": "earth-turning",
     "animationType": "radiate",
     "colorTheme": "cyan-gold",
     "effectAssets": [
-      "/assets/effects/effect-tipping-halo.svg",
+      "/assets/effects/effect-turning-halo.svg",
       "/assets/effects/effect-network-lines.svg"
     ]
   },

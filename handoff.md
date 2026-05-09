@@ -15,14 +15,14 @@ Chosen direction: storybook plus illustrated planet. The interface keeps paper, 
 - `assets/earth/earth-repairing.svg`
 - `assets/earth/earth-blooming.svg`
 - `assets/earth/earth-collective.svg`
-- `assets/earth/earth-tipping.svg`
+- `assets/earth/earth-turning.svg`
 - `assets/earth/earth-collapsing.svg`
 - `assets/earth/earth-fragile.png`
 - `assets/earth/earth-warming.png`
 - `assets/earth/earth-repairing.png`
 - `assets/earth/earth-blooming.png`
 - `assets/earth/earth-collective.png`
-- `assets/earth/earth-tipping.png`
+- `assets/earth/earth-turning.png`
 - `assets/earth/earth-collapsing.png`
 - `assets/effects/effect-crack-overlay.svg`
 - `assets/effects/effect-heat-haze.svg`
@@ -30,7 +30,7 @@ Chosen direction: storybook plus illustrated planet. The interface keeps paper, 
 - `assets/effects/effect-sprout.svg`
 - `assets/effects/effect-water-ripple.svg`
 - `assets/effects/effect-network-lines.svg`
-- `assets/effects/effect-tipping-halo.svg`
+- `assets/effects/effect-turning-halo.svg`
 - `assets/effects/texture-paper-grain.svg`
 - `assets/effects/icon-repair.svg`
 - `assets/effects/icon-temperature.svg`
@@ -58,7 +58,7 @@ Primary tokens are defined in `:root` inside `styles.css`.
 - `--clay`: warning, Earth material, and margin labels.
 - `--ember`: collapse and negative action accents.
 - `--sky-faint`: fragile atmosphere.
-- `--gold-soft`: tipping glow and publication highlight.
+- `--gold-soft`: turning glow and publication highlight.
 
 Typography:
 
@@ -109,7 +109,7 @@ Archive:
 - Repairing: stitched cracks, green repair lines, incomplete healing.
 - Blooming: moss green, river marks, sprouts, living surface.
 - Collective: connected lights and care network lines.
-- Tipping: strong warm halo, transformed cracks, irreversible positive shift.
+- Turning: strong warm halo, transformed cracks, irreversible positive shift.
 - Collapsing: charcoal surface, broken fragments, ember cracks, polluted atmosphere.
 
 The PNG set is generated from a single image-model reference sheet and split into 512x512 state assets. The SVG set remains available as scalable fallback artwork.
@@ -125,7 +125,7 @@ The PNG set is generated from a single image-model reference sheet and split int
 ## Transition notes for development
 
 - On keyword submit, fade/scale the current Earth asset out over 180ms, then crossfade the next state in over 260ms.
-- Positive transitions can add `effect-repair-glow.svg`, `effect-sprout.svg`, or `effect-tipping-halo.svg`.
+- Positive transitions can add `effect-repair-glow.svg`, `effect-sprout.svg`, or `effect-turning-halo.svg`.
 - Warming/collapse transitions can briefly overlay `effect-heat-haze.svg` or `effect-crack-overlay.svg`.
 - Status label should update at the same time as the Earth asset.
 - Story text should appear after the Earth transition starts, not before, so the visual change feels causal.
@@ -140,7 +140,7 @@ The PNG set is generated from a single image-model reference sheet and split int
 - [x] Mobile layout exists through responsive CSS.
 - [x] Asset files are named and exported with lowercase kebab-case.
 - [x] Design avoids generic eco-website aesthetics.
-- [x] Design supports both positive tipping and collapse states.
+- [x] Design supports both positive turning-point and collapse states.
 
 ## Implementation boundary
 
