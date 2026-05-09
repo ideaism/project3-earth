@@ -128,15 +128,14 @@ function getFallbackResponse(id, fallbackIndex = 0) {
 export function determineEnding(variables, history) {
   const counts = countActionCategories(history);
   const selected = history.map((item) => item.keyword);
-  const hasTechnologyPath = selected.some((keyword) =>
-    ['protect', 'technology', 'efficiency', 'build', 'greenwash'].includes(keyword)
-  );
-  const hasUnequalPath = selected.some((keyword) =>
-    ['protect', 'technology', 'exploit', 'isolate', 'adapt'].includes(keyword)
-  );
+  const hasAny = (keywords) => selected.some((keyword) => keywords.includes(keyword));
+  const hasTechnologyPath = hasAny(['technology', 'efficiency', 'build', 'greenwash']);
+  const hasCollectivePath = hasAny(['share', 'teach', 'protest', 'organise', 'listen']);
+  const hasBloomingPath = hasAny(['plant', 'restore', 'compost', 'protect']);
+  const hasRepairPath = hasAny(['repair', 'reduce', 'technology', 'efficiency', 'archive']);
 
   if (variables.earthHealth <= 30 || variables.waste >= 75 || counts.negative >= 3) {
-    return getEnding('collapse-story');
+    return getEnding('collapsing-earth');
   }
 
   if (
@@ -148,18 +147,30 @@ export function determineEnding(variables, history) {
     counts.positive >= 4 &&
     counts.negative === 0
   ) {
-    return getEnding('regenerative-earth');
+    return getEnding('turning-earth');
   }
 
-  if (hasTechnologyPath && (variables.communityCare <= 40 || variables.justice <= 40)) {
-    return getEnding('technological-green-future');
+  if (variables.communityCare >= 65 && variables.justice >= 50 && hasCollectivePath) {
+    return getEnding('collective-earth');
   }
 
-  if (variables.earthHealth >= 50 && variables.justice <= 35 && hasUnequalPath) {
-    return getEnding('unequal-survival');
+  if (variables.biodiversity >= 65 && variables.earthHealth >= 55 && hasBloomingPath) {
+    return getEnding('blooming-earth');
   }
 
-  return getEnding('fragile-balance');
+  if (variables.temperature >= 65 || variables.waste >= 65 || counts.negative >= 2) {
+    return getEnding('warming-earth');
+  }
+
+  if (
+    hasRepairPath &&
+    (variables.earthHealth >= 55 || variables.waste <= 35 || hasTechnologyPath) &&
+    counts.negative <= 1
+  ) {
+    return getEnding('repairing-earth');
+  }
+
+  return getEnding('fragile-earth');
 }
 
 export function countActionCategories(history) {

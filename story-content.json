@@ -32,37 +32,37 @@
     {
       "id": "chapter-1",
       "number": 1,
-      "title": "The Earth Waits",
-      "purpose": "Introduce a fragile Earth and invite the first keyword.",
-      "transition": "The page opens like a field before rain."
+      "title": "The Cracked Beginning",
+      "purpose": "Introduce the fragile Earth as a cracked but still responsive body.",
+      "transition": "The first page opens on a surface that can still be changed."
     },
     {
       "id": "chapter-2",
       "number": 2,
-      "title": "The First Ripple",
-      "purpose": "Show that one word produces an effect.",
-      "transition": "The first word lands, and the surface begins to answer."
+      "title": "Heat or Repair",
+      "purpose": "Show how early choices move the Earth toward warming pressure or visible repair.",
+      "transition": "The first word becomes heat, or thread, or another small chance."
     },
     {
       "id": "chapter-3",
       "number": 3,
-      "title": "The System Listens",
-      "purpose": "Reveal relationships between soil, water, waste, care, and justice.",
-      "transition": "No action stays alone; every choice touches another root."
+      "title": "Roots Under the Surface",
+      "purpose": "Show repair becoming ecological recovery through roots, water, soil, and patience.",
+      "transition": "A repaired line becomes a root when care stays long enough."
     },
     {
       "id": "chapter-4",
       "number": 4,
-      "title": "The Turning Point",
-      "purpose": "Bring the story to a threshold where repeated choices matter.",
-      "transition": "The Earth leans toward the future that has been practiced."
+      "title": "The Network of Care",
+      "purpose": "Move from individual action into collective care and the possibility of a positive turning point.",
+      "transition": "A single repair becomes a network when it is shared."
     },
     {
       "id": "chapter-5",
       "number": 5,
-      "title": "The Story Becomes a Future",
-      "purpose": "Resolve the chosen path into a final ending and reflection.",
-      "transition": "The last word does not close the world; it reveals the path."
+      "title": "The Earth You Published",
+      "purpose": "Read the accumulated choices through the final Earth state and ending card.",
+      "transition": "The last word does not close the world; it reveals the Earth that was made."
     }
   ],
   "keywords": [
@@ -555,51 +555,71 @@
   ],
   "endings": [
     {
-      "id": "regenerative-earth",
-      "title": "Regenerative Earth",
-      "condition": "High earthHealth, high communityCare, high justice, low waste, repeated positive keywords.",
-      "summary": "The Earth did not become perfect. It became connected again. Every small action found another, until repair became a pattern strong enough to change the weather of the story.",
-      "earthVoice": "I was not saved by one word. I was changed by what kept returning.",
-      "reflectionPrompt": "Which action could become a pattern in your own community?",
+      "id": "turning-earth",
+      "title": "Turning Earth",
+      "condition": "Very high futureMomentum, strong earthHealth, repeated collective and regenerative choices.",
+      "summary": "The golden cracks do not vanish. They become lines of force. What once looked like damage begins to tip toward a shared, living future.",
+      "earthVoice": "I was changed when care stopped being occasional and became a pattern.",
+      "reflectionPrompt": "Which repeated action could become a turning point where you live?",
       "suggestedFinalVisualState": "turning",
-      "commonKeywords": ["repair", "share", "organise", "restore", "plant"]
+      "commonKeywords": ["repair", "plant", "share", "organise", "restore"]
     },
     {
-      "id": "fragile-balance",
-      "title": "Fragile Balance",
-      "condition": "Mixed variables, no extreme collapse, limited positive momentum.",
-      "summary": "The Earth remains between two futures. Some wounds soften. Some heat stays. The story is not saved, not lost, and still listening for what repeats next.",
-      "earthVoice": "I am not finished. Neither is your story.",
-      "reflectionPrompt": "What would move this balance toward repair?",
-      "suggestedFinalVisualState": "fragile",
-      "commonKeywords": ["listen", "adapt", "reduce", "delay", "protect"]
+      "id": "collective-earth",
+      "title": "Collective Earth",
+      "condition": "High communityCare and justice, with shared action stronger than individual repair alone.",
+      "summary": "Lights cross the surface like promises kept in public. The Earth is still wounded, but the wounds are no longer carried alone.",
+      "earthVoice": "When hands found each other, I felt the distance between harms begin to shorten.",
+      "reflectionPrompt": "Who needs to be connected before repair can last?",
+      "suggestedFinalVisualState": "collective",
+      "commonKeywords": ["share", "teach", "protest", "organise", "listen"]
     },
     {
-      "id": "technological-green-future",
-      "title": "Technological Green Future",
-      "condition": "High technology or efficiency, moderate health, justice not consistently high.",
-      "summary": "The machines become cleaner. The numbers improve. Yet the old habits remain underneath, waiting to grow whenever care is replaced by speed.",
-      "earthVoice": "A tool without care can polish the surface of a wound.",
-      "reflectionPrompt": "What kind of technology also changes the relationship?",
+      "id": "blooming-earth",
+      "title": "Blooming Earth",
+      "condition": "High biodiversity and earthHealth, with planting, restoration, composting, or protection repeated.",
+      "summary": "Green returns first as a trace, then as cover, then as bloom. The repaired places begin to feed the living ones beside them.",
+      "earthVoice": "Give a damaged place time, and it may answer in roots, rivers, and flowers.",
+      "reflectionPrompt": "What living system near you needs patient return?",
+      "suggestedFinalVisualState": "blooming",
+      "commonKeywords": ["plant", "restore", "compost", "protect", "repair"]
+    },
+    {
+      "id": "repairing-earth",
+      "title": "Repairing Earth",
+      "condition": "Moderate recovery, lowered waste, and visible repair without enough collective momentum to tip the system.",
+      "summary": "Green stitches cross the old fractures. The Earth is not healed, but the wound is being held open to care instead of neglect.",
+      "earthVoice": "Mending is not the end of harm. It is the refusal to leave harm unattended.",
+      "reflectionPrompt": "What broken pattern could be mended before it spreads?",
       "suggestedFinalVisualState": "repairing",
-      "commonKeywords": ["technology", "efficiency", "build", "reduce", "greenwash"]
+      "commonKeywords": ["repair", "reduce", "technology", "efficiency", "archive"]
     },
     {
-      "id": "unequal-survival",
-      "title": "Unequal Survival",
-      "condition": "Some health or protection, low justice, high exploitation or isolation.",
-      "summary": "Some places are cooled, guarded, and repaired. Others are asked to carry the heat. The Earth survives unevenly, and the protected future remains broken at its edge.",
-      "earthVoice": "A future that leaves some bodies behind is still a broken future.",
-      "reflectionPrompt": "Who is included in the repair?",
-      "suggestedFinalVisualState": "collective-fragmented",
-      "commonKeywords": ["protect", "exploit", "isolate", "adapt", "technology"]
+      "id": "fragile-earth",
+      "title": "Fragile Earth",
+      "condition": "Mixed choices, low extremes, and an unresolved path that leaves the Earth cracked but still responsive.",
+      "summary": "The pale surface holds its cracks like unfinished sentences. Nothing has fully tipped. Nothing is beyond response.",
+      "earthVoice": "I am still listening from inside the fracture.",
+      "reflectionPrompt": "What would move this fragile balance toward repair?",
+      "suggestedFinalVisualState": "fragile",
+      "commonKeywords": ["listen", "adapt", "archive", "reduce", "protect"]
     },
     {
-      "id": "collapse-story",
-      "title": "Collapse Story",
-      "condition": "Very low earthHealth, high waste, high temperature, repeated negative keywords.",
-      "summary": "The Earth does not end in one moment. It frays through postponed decisions, hidden wounds, and warnings heard too late. Even here, the last page asks what pattern must stop first.",
-      "earthVoice": "I tried to warn you in heat, silence, flood, and dust.",
+      "id": "warming-earth",
+      "title": "Warming Earth",
+      "condition": "High temperature or waste pressure, with delay, consumption, or extraction present but not yet total collapse.",
+      "summary": "Orange heat gathers in the cracks. The Earth has not fallen apart, but pressure is becoming visible everywhere.",
+      "earthVoice": "Heat is one way I tell the story you keep postponing.",
+      "reflectionPrompt": "Which pressure must be lowered first?",
+      "suggestedFinalVisualState": "warming",
+      "commonKeywords": ["extract", "consume", "delay", "waste", "overuse"]
+    },
+    {
+      "id": "collapsing-earth",
+      "title": "Collapsing Earth",
+      "condition": "Very low earthHealth, high waste, high temperature, or repeated negative choices.",
+      "summary": "The surface darkens into ash and ember. Collapse does not arrive as one event; it is built from repeated harms left unbroken.",
+      "earthVoice": "I warned you in heat, silence, fracture, and dust.",
       "reflectionPrompt": "What repeated pattern would need to stop first?",
       "suggestedFinalVisualState": "collapsing",
       "commonKeywords": ["extract", "consume", "ignore", "waste", "delay"]

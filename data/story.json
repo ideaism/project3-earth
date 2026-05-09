@@ -9,38 +9,38 @@
   "chapters": [
     {
       "chapter": 1,
-      "title": "The Earth Waits",
-      "prompt": "Type a small action to begin.",
-      "purpose": "Introduce a fragile Earth and invite the first keyword.",
-      "transition": "The page opens like a field before rain."
+      "title": "The Cracked Beginning",
+      "prompt": "The pale Earth waits with hairline cracks. What first word do you offer?",
+      "purpose": "Introduce the fragile Earth as a cracked but still responsive body.",
+      "transition": "The first page opens on a surface that can still be changed."
     },
     {
       "chapter": 2,
-      "title": "The First Ripple",
-      "prompt": "The first word lands, and the surface begins to answer.",
-      "purpose": "Show that one word produces an effect.",
-      "transition": "The first word lands, and the surface begins to answer."
+      "title": "Heat or Repair",
+      "prompt": "The cracks begin to glow or soften. Which pattern should continue?",
+      "purpose": "Show how early choices move the Earth toward warming pressure or visible repair.",
+      "transition": "The first word becomes heat, or thread, or another small chance."
     },
     {
       "chapter": 3,
-      "title": "The System Listens",
-      "prompt": "No action stays alone; every choice touches another root.",
-      "purpose": "Reveal relationships between soil, water, waste, care, and justice.",
-      "transition": "No action stays alone; every choice touches another root."
+      "title": "Roots Under the Surface",
+      "prompt": "Green stitches reach toward soil and water. What should be restored next?",
+      "purpose": "Show repair becoming ecological recovery through roots, water, soil, and patience.",
+      "transition": "A repaired line becomes a root when care stays long enough."
     },
     {
       "chapter": 4,
-      "title": "The Turning Point",
-      "prompt": "The Earth leans toward the future that has been practiced.",
-      "purpose": "Bring the story to a threshold where repeated choices matter.",
-      "transition": "The Earth leans toward the future that has been practiced."
+      "title": "The Network of Care",
+      "prompt": "Lights begin to connect across the Earth. Who joins the pattern now?",
+      "purpose": "Move from individual action into collective care and the possibility of a positive turning point.",
+      "transition": "A single repair becomes a network when it is shared."
     },
     {
       "chapter": 5,
-      "title": "The Story Becomes a Future",
-      "prompt": "The last word does not close the world; it reveals the path.",
-      "purpose": "Resolve the chosen path into a final ending and reflection.",
-      "transition": "The last word does not close the world; it reveals the path."
+      "title": "The Earth You Published",
+      "prompt": "The final image gathers every word. What future has this path published?",
+      "purpose": "Read the accumulated choices through the final Earth state and ending card.",
+      "transition": "The last word does not close the world; it reveals the Earth that was made."
     }
   ],
   "responses": [

@@ -259,6 +259,7 @@ function StoryPanel({ appState, onSubmitKeyword, onViewArchive, onHome }) {
       </article>
 
       <p className="choice-prompt">{appState.currentPrompt}</p>
+      <KeywordInput onSubmitKeyword={onSubmitKeyword} />
       <ActionChips actions={getSuggestedActions()} onSubmitKeyword={onSubmitKeyword} />
 
       {branchPrompt && (
@@ -324,6 +325,36 @@ function ProgressIndicator({ round, maxRounds }) {
         })}
       </div>
     </div>
+  );
+}
+
+function KeywordInput({ onSubmitKeyword }) {
+  const [value, setValue] = useState('');
+
+  function submit(event) {
+    event.preventDefault();
+    const trimmedValue = value.trim();
+    if (!trimmedValue) return;
+    onSubmitKeyword(trimmedValue);
+    setValue('');
+  }
+
+  return (
+    <form className="keyword-form" onSubmit={submit}>
+      <label htmlFor="keyword-input">Type a keyword</label>
+      <div className="input-row">
+        <input
+          id="keyword-input"
+          type="text"
+          value={value}
+          placeholder="repair, plant, share..."
+          onChange={(event) => setValue(event.target.value)}
+        />
+        <button className="primary-button" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
   );
 }
 

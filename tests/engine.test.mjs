@@ -43,26 +43,74 @@ describe('story engine', () => {
     }
   });
 
-  it('returns Regenerative Earth for a strong positive path', () => {
-    const finalState = playPath(['repair', 'share', 'restore', 'organise', 'justice']);
+  it('returns Turning Earth for a strong positive path', () => {
+    const finalState = playPath(['repair', 'plant', 'share', 'organise', 'restore']);
 
     assert.equal(finalState.screen, 'ending');
-    assert.equal(finalState.ending.id, 'regenerative-earth');
+    assert.equal(finalState.ending.id, 'turning-earth');
     assert.equal(finalState.history.length, 5);
   });
 
-  it('returns Collapse Story for repeated harmful choices', () => {
+  it('returns Collapsing Earth for repeated harmful choices', () => {
     const finalState = playPath(['consume', 'discard', 'ignore', 'delay', 'greenwash']);
 
     assert.equal(finalState.screen, 'ending');
-    assert.equal(finalState.ending.id, 'collapse-story');
+    assert.equal(finalState.ending.id, 'collapsing-earth');
   });
 
-  it('keeps the technology-heavy low justice path in Technological Green Future', () => {
+  it('keeps a mixed technology-heavy path in Repairing Earth', () => {
     const finalState = playPath(['technology', 'efficiency', 'build', 'protect', 'adapt']);
 
     assert.equal(finalState.screen, 'ending');
-    assert.equal(finalState.ending.id, 'technological-green-future');
+    assert.equal(finalState.ending.id, 'repairing-earth');
+  });
+
+  it('can resolve to each Earth-state ending', () => {
+    const scenarios = [
+      {
+        path: ['repair', 'plant', 'share', 'organise', 'restore'],
+        ending: 'turning-earth',
+        visualState: 'turning'
+      },
+      {
+        path: ['share', 'teach', 'protest', 'organise', 'listen'],
+        ending: 'collective-earth',
+        visualState: 'collective'
+      },
+      {
+        path: ['plant', 'restore', 'compost', 'protect', 'plant'],
+        ending: 'blooming-earth',
+        visualState: 'blooming'
+      },
+      {
+        path: ['repair', 'reduce', 'technology', 'efficiency', 'archive'],
+        ending: 'repairing-earth',
+        visualState: 'repairing'
+      },
+      {
+        path: ['adapt', 'build', 'protect', 'adapt', 'build'],
+        ending: 'fragile-earth',
+        visualState: 'fragile'
+      },
+      {
+        path: ['delay', 'waste', 'adapt', 'archive', 'listen'],
+        ending: 'warming-earth',
+        visualState: 'warming'
+      },
+      {
+        path: ['extract', 'consume', 'delay', 'waste', 'ignore'],
+        ending: 'collapsing-earth',
+        visualState: 'collapsing'
+      }
+    ];
+
+    for (const scenario of scenarios) {
+      const finalState = playPath(scenario.path);
+
+      assert.equal(finalState.screen, 'ending');
+      assert.equal(finalState.ending.id, scenario.ending);
+      assert.equal(finalState.ending.visualState, scenario.visualState);
+    }
   });
 
   it('does not let the last action unconditionally override the Earth state', () => {
