@@ -1,0 +1,94 @@
+[
+  {
+    "id": "fragile",
+    "name": "Fragile Earth",
+    "assetPath": "/assets/earth/earth-fragile.png",
+    "backgroundClass": "earth-fragile",
+    "animationType": "pulse",
+    "colorTheme": "blue-green",
+    "effectAssets": [
+      "/assets/effects/effect-crack-overlay.svg"
+    ]
+  },
+  {
+    "id": "warming",
+    "name": "Warming Earth",
+    "assetPath": "/assets/earth/earth-warming.png",
+    "backgroundClass": "earth-warming",
+    "animationType": "heat",
+    "colorTheme": "red-orange",
+    "effectAssets": [
+      "/assets/effects/effect-heat-haze.svg",
+      "/assets/effects/effect-crack-overlay.svg"
+    ]
+  },
+  {
+    "id": "silent",
+    "name": "Silent Earth",
+    "assetPath": "/assets/earth/earth-fragile.png",
+    "backgroundClass": "earth-silent",
+    "animationType": "fade",
+    "colorTheme": "gray-green",
+    "effectAssets": [
+      "/assets/effects/effect-crack-overlay.svg"
+    ]
+  },
+  {
+    "id": "repairing",
+    "name": "Repairing Earth",
+    "assetPath": "/assets/earth/earth-repairing.png",
+    "backgroundClass": "earth-repairing",
+    "animationType": "mend",
+    "colorTheme": "green-yellow",
+    "effectAssets": [
+      "/assets/effects/effect-repair-glow.svg"
+    ]
+  },
+  {
+    "id": "blooming",
+    "name": "Blooming Earth",
+    "assetPath": "/assets/earth/earth-blooming.png",
+    "backgroundClass": "earth-blooming",
+    "animationType": "bloom",
+    "colorTheme": "green-pink",
+    "effectAssets": [
+      "/assets/effects/effect-sprout.svg",
+      "/assets/effects/effect-water-ripple.svg"
+    ]
+  },
+  {
+    "id": "collective",
+    "name": "Collective Earth",
+    "assetPath": "/assets/earth/earth-collective.png",
+    "backgroundClass": "earth-collective",
+    "animationType": "glow",
+    "colorTheme": "green-gold",
+    "effectAssets": [
+      "/assets/effects/effect-network-lines.svg"
+    ]
+  },
+  {
+    "id": "tipping",
+    "name": "Tipping Earth",
+    "assetPath": "/assets/earth/earth-tipping.png",
+    "backgroundClass": "earth-tipping",
+    "animationType": "radiate",
+    "colorTheme": "cyan-gold",
+    "effectAssets": [
+      "/assets/effects/effect-tipping-halo.svg",
+      "/assets/effects/effect-network-lines.svg"
+    ]
+  },
+  {
+    "id": "collapsing",
+    "name": "Collapsing Earth",
+    "assetPath": "/assets/earth/earth-collapsing.png",
+    "backgroundClass": "earth-collapsing",
+    "animationType": "shake",
+    "colorTheme": "black-red",
+    "effectAssets": [
+      "/assets/effects/effect-heat-haze.svg",
+      "/assets/effects/effect-crack-overlay.svg"
+    ]
+  }
+]

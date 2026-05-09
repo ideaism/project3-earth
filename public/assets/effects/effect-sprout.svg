@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Sprout effect</title>
+  <g fill="none" stroke="#3d6650" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 510V270"/>
+    <path d="M300 340c-96-26-154-86-174-180 98 8 162 62 174 180z" fill="#a6b7a0"/>
+    <path d="M300 292c74-78 152-112 236-100-28 98-104 152-236 100z" fill="#6b8d62"/>
+    <path d="M300 430c-70-16-117-57-142-124 77 3 125 44 142 124z" fill="#87a96a"/>
+  </g>
+</svg>

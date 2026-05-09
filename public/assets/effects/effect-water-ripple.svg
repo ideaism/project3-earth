@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Water ripple effect</title>
+  <g fill="none" stroke="#b9cfce" stroke-width="18" stroke-linecap="round" opacity="0.72">
+    <path d="M90 110c82-44 156-44 238 0s156 44 238 0 156-44 238 0"/>
+    <path d="M150 210c70-36 133-36 203 0s133 36 203 0 133-36 203 0"/>
+    <path d="M230 310c54-28 106-28 160 0s106 28 160 0"/>
+  </g>
+</svg>

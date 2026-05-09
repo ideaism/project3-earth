@@ -1,0 +1,87 @@
+[
+  {
+    "id": "regenerative-earth",
+    "title": "Regenerative Earth",
+    "priority": 1,
+    "conditionDescription": "High earthHealth, high communityCare, high justice, low waste, repeated positive keywords.",
+    "summary": "The Earth did not become perfect. It became connected again. Every small action found another, until repair became a pattern strong enough to change the weather of the story.",
+    "earthVoice": "I was not saved by one word. I was changed by what kept returning.",
+    "reflectionPrompt": "Which action could become a pattern in your own community?",
+    "visualState": "tipping",
+    "commonKeywords": [
+      "repair",
+      "share",
+      "organise",
+      "restore",
+      "plant"
+    ]
+  },
+  {
+    "id": "fragile-balance",
+    "title": "Fragile Balance",
+    "priority": 2,
+    "conditionDescription": "Mixed variables, no extreme collapse, limited positive tipping.",
+    "summary": "The Earth remains between two futures. Some wounds soften. Some heat stays. The story is not saved, not lost, and still listening for what repeats next.",
+    "earthVoice": "I am not finished. Neither is your story.",
+    "reflectionPrompt": "What would move this balance toward repair?",
+    "visualState": "fragile",
+    "commonKeywords": [
+      "listen",
+      "adapt",
+      "reduce",
+      "delay",
+      "protect"
+    ]
+  },
+  {
+    "id": "technological-green-future",
+    "title": "Technological Green Future",
+    "priority": 3,
+    "conditionDescription": "High technology or efficiency, moderate health, justice not consistently high.",
+    "summary": "The machines become cleaner. The numbers improve. Yet the old habits remain underneath, waiting to grow whenever care is replaced by speed.",
+    "earthVoice": "A tool without care can polish the surface of a wound.",
+    "reflectionPrompt": "What kind of technology also changes the relationship?",
+    "visualState": "repairing",
+    "commonKeywords": [
+      "technology",
+      "efficiency",
+      "build",
+      "reduce",
+      "greenwash"
+    ]
+  },
+  {
+    "id": "unequal-survival",
+    "title": "Unequal Survival",
+    "priority": 4,
+    "conditionDescription": "Some health or protection, low justice, high exploitation or isolation.",
+    "summary": "Some places are cooled, guarded, and repaired. Others are asked to carry the heat. The Earth survives unevenly, and the protected future remains broken at its edge.",
+    "earthVoice": "A future that leaves some bodies behind is still a broken future.",
+    "reflectionPrompt": "Who is included in the repair?",
+    "visualState": "repairing",
+    "commonKeywords": [
+      "protect",
+      "exploit",
+      "isolate",
+      "adapt",
+      "technology"
+    ]
+  },
+  {
+    "id": "collapse-story",
+    "title": "Collapse Story",
+    "priority": 5,
+    "conditionDescription": "Very low earthHealth, high waste, high temperature, repeated negative keywords.",
+    "summary": "The Earth does not end in one moment. It frays through postponed decisions, hidden wounds, and warnings heard too late. Even here, the last page asks what pattern must stop first.",
+    "earthVoice": "I tried to warn you in heat, silence, flood, and dust.",
+    "reflectionPrompt": "What repeated pattern would need to stop first?",
+    "visualState": "collapsing",
+    "commonKeywords": [
+      "extract",
+      "consume",
+      "ignore",
+      "waste",
+      "delay"
+    ]
+  }
+]

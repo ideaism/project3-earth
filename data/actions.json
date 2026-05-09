@@ -1,0 +1,741 @@
+[
+  {
+    "id": "repair",
+    "label": "repair",
+    "aliases": [
+      "mend",
+      "fix",
+      "restore broken",
+      "patch",
+      "restore object"
+    ],
+    "category": "positive",
+    "tags": [
+      "care",
+      "waste",
+      "community"
+    ],
+    "narrativeMeaning": "Mending, refusing waste, and sharing practical skill.",
+    "effects": {
+      "earthHealth": 8,
+      "temperature": -1,
+      "biodiversity": 1,
+      "communityCare": 9,
+      "justice": 2,
+      "waste": -8,
+      "hope": 7,
+      "tippingScore": 6
+    },
+    "preferredEarthState": "repairing"
+  },
+  {
+    "id": "plant",
+    "label": "plant",
+    "aliases": [
+      "grow",
+      "seed",
+      "tree",
+      "forest",
+      "reforest"
+    ],
+    "category": "positive",
+    "tags": [
+      "biodiversity",
+      "soil",
+      "future"
+    ],
+    "narrativeMeaning": "Patient future-making through roots, soil, and habitat.",
+    "effects": {
+      "earthHealth": 7,
+      "temperature": -1,
+      "biodiversity": 9,
+      "communityCare": 2,
+      "justice": 1,
+      "waste": -1,
+      "hope": 6,
+      "tippingScore": 5
+    },
+    "preferredEarthState": "blooming"
+  },
+  {
+    "id": "share",
+    "label": "share",
+    "aliases": [
+      "mutual aid",
+      "give",
+      "collective",
+      "borrow",
+      "exchange",
+      "circulate"
+    ],
+    "category": "positive",
+    "tags": [
+      "community",
+      "consumption",
+      "care"
+    ],
+    "narrativeMeaning": "Reducing excess by circulating tools, food, and knowledge.",
+    "effects": {
+      "earthHealth": 4,
+      "temperature": 0,
+      "biodiversity": 1,
+      "communityCare": 10,
+      "justice": 6,
+      "waste": -4,
+      "hope": 6,
+      "tippingScore": 6
+    },
+    "preferredEarthState": "collective"
+  },
+  {
+    "id": "listen",
+    "label": "listen",
+    "aliases": [
+      "hear",
+      "notice",
+      "attend"
+    ],
+    "category": "positive",
+    "tags": [
+      "justice",
+      "attention",
+      "humility"
+    ],
+    "narrativeMeaning": "Making room for ignored voices and slower knowledge.",
+    "effects": {
+      "earthHealth": 3,
+      "temperature": -1,
+      "biodiversity": 2,
+      "communityCare": 7,
+      "justice": 7,
+      "waste": -2,
+      "hope": 5,
+      "tippingScore": 4
+    },
+    "preferredEarthState": "fragile"
+  },
+  {
+    "id": "reduce",
+    "label": "reduce",
+    "aliases": [
+      "reuse",
+      "less",
+      "refuse",
+      "low waste",
+      "lessen",
+      "cut waste",
+      "use less"
+    ],
+    "category": "positive",
+    "tags": [
+      "restraint",
+      "waste",
+      "temperature"
+    ],
+    "narrativeMeaning": "Restraint that lowers pressure instead of moving harm elsewhere.",
+    "effects": {
+      "earthHealth": 6,
+      "temperature": -3,
+      "biodiversity": 2,
+      "communityCare": 3,
+      "justice": 2,
+      "waste": -10,
+      "hope": 5,
+      "tippingScore": 5
+    },
+    "preferredEarthState": "repairing"
+  },
+  {
+    "id": "teach",
+    "label": "teach",
+    "aliases": [
+      "learn",
+      "school",
+      "educate",
+      "workshop",
+      "show",
+      "pass on"
+    ],
+    "category": "positive",
+    "tags": [
+      "memory",
+      "community",
+      "future"
+    ],
+    "narrativeMeaning": "Knowledge passed forward as shared survival skill.",
+    "effects": {
+      "earthHealth": 4,
+      "temperature": 0,
+      "biodiversity": 1,
+      "communityCare": 8,
+      "justice": 5,
+      "waste": -2,
+      "hope": 7,
+      "tippingScore": 5
+    },
+    "preferredEarthState": "collective"
+  },
+  {
+    "id": "protest",
+    "label": "protest",
+    "aliases": [
+      "organise",
+      "organize",
+      "march",
+      "strike",
+      "refuse",
+      "resist",
+      "justice"
+    ],
+    "category": "positive",
+    "tags": [
+      "justice",
+      "policy",
+      "collective"
+    ],
+    "narrativeMeaning": "Collective refusal that pressures harmful systems.",
+    "effects": {
+      "earthHealth": 3,
+      "temperature": -1,
+      "biodiversity": 1,
+      "communityCare": 8,
+      "justice": 10,
+      "waste": 0,
+      "hope": 4,
+      "tippingScore": 6
+    },
+    "preferredEarthState": "collective"
+  },
+  {
+    "id": "archive",
+    "label": "archive",
+    "aliases": [
+      "remember",
+      "record",
+      "document"
+    ],
+    "category": "positive",
+    "tags": [
+      "memory",
+      "evidence",
+      "accountability"
+    ],
+    "narrativeMeaning": "Keeping evidence and memory so damage cannot disappear.",
+    "effects": {
+      "earthHealth": 2,
+      "temperature": 0,
+      "biodiversity": 0,
+      "communityCare": 3,
+      "justice": 2,
+      "waste": 0,
+      "hope": 3,
+      "tippingScore": 2
+    },
+    "preferredEarthState": "fragile"
+  },
+  {
+    "id": "restore",
+    "label": "restore",
+    "aliases": [
+      "rewild",
+      "heal",
+      "recover",
+      "heal land",
+      "return habitat"
+    ],
+    "category": "positive",
+    "tags": [
+      "ecology",
+      "biodiversity",
+      "repair"
+    ],
+    "narrativeMeaning": "Repairing damaged landscapes and returning living systems.",
+    "effects": {
+      "earthHealth": 9,
+      "temperature": -2,
+      "biodiversity": 8,
+      "communityCare": 3,
+      "justice": 2,
+      "waste": -3,
+      "hope": 6,
+      "tippingScore": 7
+    },
+    "preferredEarthState": "blooming"
+  },
+  {
+    "id": "organise",
+    "label": "organise",
+    "aliases": [
+      "organize",
+      "gather",
+      "coordinate"
+    ],
+    "category": "positive",
+    "tags": [
+      "collective",
+      "systems",
+      "power"
+    ],
+    "narrativeMeaning": "Turning care into shared structure and collective power.",
+    "effects": {
+      "earthHealth": 4,
+      "temperature": -1,
+      "biodiversity": 1,
+      "communityCare": 10,
+      "justice": 9,
+      "waste": -1,
+      "hope": 6,
+      "tippingScore": 8
+    },
+    "preferredEarthState": "collective"
+  },
+  {
+    "id": "compost",
+    "label": "compost",
+    "aliases": [
+      "rot",
+      "mulch",
+      "return scraps"
+    ],
+    "category": "positive",
+    "tags": [
+      "soil",
+      "waste",
+      "cycle"
+    ],
+    "narrativeMeaning": "Decay becoming nourishment instead of discard.",
+    "effects": {
+      "earthHealth": 5,
+      "temperature": -1,
+      "biodiversity": 6,
+      "communityCare": 2,
+      "justice": 1,
+      "waste": -9,
+      "hope": 5,
+      "tippingScore": 5
+    },
+    "preferredEarthState": "blooming"
+  },
+  {
+    "id": "extract",
+    "label": "extract",
+    "aliases": [
+      "mine",
+      "drill",
+      "dig",
+      "take"
+    ],
+    "category": "negative",
+    "tags": [
+      "pressure",
+      "heat",
+      "justice"
+    ],
+    "narrativeMeaning": "Taking faster than return is possible.",
+    "effects": {
+      "earthHealth": -12,
+      "temperature": 10,
+      "biodiversity": -8,
+      "communityCare": -5,
+      "justice": -8,
+      "waste": 15,
+      "hope": -8,
+      "tippingScore": -8
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "consume",
+    "label": "consume",
+    "aliases": [
+      "buy",
+      "shop",
+      "spend",
+      "more",
+      "buy more",
+      "devour",
+      "overbuy"
+    ],
+    "category": "negative",
+    "tags": [
+      "waste",
+      "appetite",
+      "disconnection"
+    ],
+    "narrativeMeaning": "Endless appetite that turns relation into discard.",
+    "effects": {
+      "earthHealth": -8,
+      "temperature": 7,
+      "biodiversity": -5,
+      "communityCare": -3,
+      "justice": -4,
+      "waste": 12,
+      "hope": -5,
+      "tippingScore": -5
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "ignore",
+    "label": "ignore",
+    "aliases": [
+      "deny",
+      "neglect",
+      "look away",
+      "dismiss"
+    ],
+    "category": "negative",
+    "tags": [
+      "delay",
+      "silence",
+      "harm"
+    ],
+    "narrativeMeaning": "Refusing to hear warnings until harm becomes ordinary.",
+    "effects": {
+      "earthHealth": -7,
+      "temperature": 5,
+      "biodiversity": -9,
+      "communityCare": -8,
+      "justice": -5,
+      "waste": 8,
+      "hope": -8,
+      "tippingScore": -6
+    },
+    "preferredEarthState": "silent"
+  },
+  {
+    "id": "waste",
+    "label": "waste",
+    "aliases": [
+      "discard",
+      "throw away",
+      "dump",
+      "pollute",
+      "trash",
+      "spoil"
+    ],
+    "category": "negative",
+    "tags": [
+      "discard",
+      "pollution",
+      "broken cycle"
+    ],
+    "narrativeMeaning": "Materials and lives treated as disposable.",
+    "effects": {
+      "earthHealth": -7,
+      "temperature": 3,
+      "biodiversity": -5,
+      "communityCare": -2,
+      "justice": -2,
+      "waste": 12,
+      "hope": -5,
+      "tippingScore": -4
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "delay",
+    "label": "delay",
+    "aliases": [
+      "later",
+      "postpone",
+      "wait"
+    ],
+    "category": "negative",
+    "tags": [
+      "inaction",
+      "threshold",
+      "risk"
+    ],
+    "narrativeMeaning": "Postponed responsibility repeated until it becomes policy.",
+    "effects": {
+      "earthHealth": -5,
+      "temperature": 6,
+      "biodiversity": -4,
+      "communityCare": -4,
+      "justice": -4,
+      "waste": 5,
+      "hope": -6,
+      "tippingScore": -4
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "exploit",
+    "label": "exploit",
+    "aliases": [
+      "use up",
+      "profit from harm",
+      "sacrifice"
+    ],
+    "category": "negative",
+    "tags": [
+      "injustice",
+      "extraction",
+      "harm"
+    ],
+    "narrativeMeaning": "Survival for some built on hidden damage elsewhere.",
+    "effects": {
+      "earthHealth": -10,
+      "temperature": 6,
+      "biodiversity": -6,
+      "communityCare": -6,
+      "justice": -10,
+      "waste": 10,
+      "hope": -8,
+      "tippingScore": -7
+    },
+    "preferredEarthState": "silent"
+  },
+  {
+    "id": "isolate",
+    "label": "isolate",
+    "aliases": [
+      "separate",
+      "withdraw",
+      "cut off"
+    ],
+    "category": "negative",
+    "tags": [
+      "community",
+      "fragility",
+      "loneliness"
+    ],
+    "narrativeMeaning": "Weakening resilience by breaking relation.",
+    "effects": {
+      "earthHealth": -4,
+      "temperature": 2,
+      "biodiversity": -2,
+      "communityCare": -10,
+      "justice": -5,
+      "waste": 3,
+      "hope": -8,
+      "tippingScore": -5
+    },
+    "preferredEarthState": "fragile"
+  },
+  {
+    "id": "overuse",
+    "label": "overuse",
+    "aliases": [
+      "drain",
+      "exhaust",
+      "overwork"
+    ],
+    "category": "negative",
+    "tags": [
+      "water",
+      "soil",
+      "energy"
+    ],
+    "narrativeMeaning": "Pressure placed on systems without time to recover.",
+    "effects": {
+      "earthHealth": -8,
+      "temperature": 5,
+      "biodiversity": -7,
+      "communityCare": -2,
+      "justice": -4,
+      "waste": 8,
+      "hope": -5,
+      "tippingScore": -5
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "discard",
+    "label": "discard",
+    "aliases": [
+      "throw away",
+      "dump",
+      "abandon"
+    ],
+    "category": "negative",
+    "tags": [
+      "waste",
+      "loss",
+      "pollution"
+    ],
+    "narrativeMeaning": "Breaking responsibility at the moment something leaves the hand.",
+    "effects": {
+      "earthHealth": -6,
+      "temperature": 3,
+      "biodiversity": -4,
+      "communityCare": -2,
+      "justice": -2,
+      "waste": 10,
+      "hope": -4,
+      "tippingScore": -4
+    },
+    "preferredEarthState": "warming"
+  },
+  {
+    "id": "greenwash",
+    "label": "greenwash",
+    "aliases": [
+      "pretend",
+      "perform care",
+      "mask harm"
+    ],
+    "category": "negative",
+    "tags": [
+      "surface",
+      "delay",
+      "accountability"
+    ],
+    "narrativeMeaning": "A polished surface that leaves the damaging pattern intact.",
+    "effects": {
+      "earthHealth": -3,
+      "temperature": 2,
+      "biodiversity": -1,
+      "communityCare": -3,
+      "justice": -5,
+      "waste": 2,
+      "hope": -3,
+      "tippingScore": -3
+    },
+    "preferredEarthState": "fragile"
+  },
+  {
+    "id": "technology",
+    "label": "technology",
+    "aliases": [
+      "tech",
+      "machine",
+      "geoengineering",
+      "device",
+      "tool",
+      "system"
+    ],
+    "category": "neutral",
+    "tags": [
+      "tools",
+      "justice",
+      "efficiency"
+    ],
+    "narrativeMeaning": "Tools that can help, but only when guided by care and justice.",
+    "effects": {
+      "earthHealth": 5,
+      "temperature": -4,
+      "biodiversity": 0,
+      "communityCare": -2,
+      "justice": -5,
+      "waste": -3,
+      "hope": 2,
+      "tippingScore": 4
+    },
+    "preferredEarthState": "repairing"
+  },
+  {
+    "id": "protect",
+    "label": "protect",
+    "aliases": [
+      "preserve",
+      "guard",
+      "reserve",
+      "defend",
+      "shelter"
+    ],
+    "category": "neutral",
+    "tags": [
+      "care",
+      "boundary",
+      "justice"
+    ],
+    "narrativeMeaning": "Care that must ask who is included and who is left outside.",
+    "effects": {
+      "earthHealth": 6,
+      "temperature": -1,
+      "biodiversity": 7,
+      "communityCare": 0,
+      "justice": -6,
+      "waste": -2,
+      "hope": 3,
+      "tippingScore": 4
+    },
+    "preferredEarthState": "blooming"
+  },
+  {
+    "id": "efficiency",
+    "label": "efficiency",
+    "aliases": [
+      "efficient",
+      "optimize",
+      "optimise",
+      "upgrade",
+      "streamline",
+      "save energy"
+    ],
+    "category": "neutral",
+    "tags": [
+      "systems",
+      "consumption",
+      "risk"
+    ],
+    "narrativeMeaning": "Less waste when honest, more consumption when used as permission.",
+    "effects": {
+      "earthHealth": 4,
+      "temperature": -5,
+      "biodiversity": 0,
+      "communityCare": -1,
+      "justice": -3,
+      "waste": -5,
+      "hope": 2,
+      "tippingScore": 4
+    },
+    "preferredEarthState": "repairing"
+  },
+  {
+    "id": "adapt",
+    "label": "adapt",
+    "aliases": [
+      "adjust",
+      "survive",
+      "prepare"
+    ],
+    "category": "neutral",
+    "tags": [
+      "survival",
+      "justice",
+      "future"
+    ],
+    "narrativeMeaning": "Learning to live with change, unevenly unless care is shared.",
+    "effects": {
+      "earthHealth": 2,
+      "temperature": 0,
+      "biodiversity": 0,
+      "communityCare": 3,
+      "justice": 2,
+      "waste": 0,
+      "hope": 2,
+      "tippingScore": 2
+    },
+    "preferredEarthState": "fragile"
+  },
+  {
+    "id": "build",
+    "label": "build",
+    "aliases": [
+      "make",
+      "construct",
+      "create"
+    ],
+    "category": "neutral",
+    "tags": [
+      "shelter",
+      "growth",
+      "materials"
+    ],
+    "narrativeMeaning": "Making shelter or expanding harm, depending on purpose and material.",
+    "effects": {
+      "earthHealth": 2,
+      "temperature": 2,
+      "biodiversity": -1,
+      "communityCare": 2,
+      "justice": 0,
+      "waste": 4,
+      "hope": 1,
+      "tippingScore": 0
+    },
+    "preferredEarthState": "fragile"
+  }
+]

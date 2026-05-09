@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Temperature icon</title>
+  <path d="M56 18a16 16 0 0 1 32 0v54a34 34 0 1 1-32 0V18z" fill="#b9673f"/>
+  <path d="M72 28v58" stroke="#fff8ea" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="72" cy="91" r="16" fill="#8f2f25"/>
+</svg>

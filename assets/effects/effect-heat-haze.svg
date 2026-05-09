@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1200" role="img" aria-labelledby="title">
+  <title id="title">Heat haze effect</title>
+  <g fill="none" stroke-linecap="round">
+    <path d="M190 260c120 58 220 58 340 0s220-58 340 0 220 58 340 0 220-58 340 0 220 58 340 0" stroke="#b9673f" stroke-width="28" opacity="0.2"/>
+    <path d="M80 530c142 62 252 62 394 0s252-62 394 0 252 62 394 0 252-62 394 0" stroke="#8f2f25" stroke-width="22" opacity="0.18"/>
+    <path d="M250 820c112 46 216 46 328 0s216-46 328 0 216 46 328 0 216-46 328 0" stroke="#d9b85f" stroke-width="26" opacity="0.18"/>
+  </g>
+</svg>

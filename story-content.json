@@ -1,0 +1,705 @@
+{
+  "project": {
+    "name": "The Earth, Written by Us",
+    "subtitle": "An Earth Story You Can Change",
+    "module": "story",
+    "approachStatement": "The story treats the website as a living publication: each reader word becomes a small ecological action, each repeated pattern changes the Earth, and each ending becomes a personal record of consequence."
+  },
+  "storyBible": {
+    "worldPremise": "The Earth is awake inside the page. It does not ask for one perfect answer; it listens for patterns of care, extraction, delay, repair, and collective change. The reader publishes a future by choosing what returns.",
+    "centralQuestion": "What kind of Earth story do our repeated choices publish?",
+    "voices": {
+      "narrator": "Third-person, calm, storybook-like, concrete, and short.",
+      "earth": "First-person, intimate, patient, and never overly human.",
+      "system": "Brief feedback that names consequence without scolding."
+    },
+    "notThisStory": [
+      "Not a slogan generator.",
+      "Not a punishment game.",
+      "Not a fantasy where one individual action fixes the planet.",
+      "Not a collapse spectacle.",
+      "Not a technology story without justice."
+    ]
+  },
+  "prologue": {
+    "id": "story-set-01",
+    "title": "The Earth Waits",
+    "paragraph": "The Earth was not silent. It was waiting inside the page. A word small enough to type could still become a pattern. Choose carefully, not perfectly. The story will answer with weather, roots, heat, and memory.",
+    "beginButtonLabel": "Begin the story",
+    "firstInputPrompt": "Type a small action to begin."
+  },
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "number": 1,
+      "title": "The Earth Waits",
+      "purpose": "Introduce a fragile Earth and invite the first keyword.",
+      "transition": "The page opens like a field before rain."
+    },
+    {
+      "id": "chapter-2",
+      "number": 2,
+      "title": "The First Ripple",
+      "purpose": "Show that one word produces an effect.",
+      "transition": "The first word lands, and the surface begins to answer."
+    },
+    {
+      "id": "chapter-3",
+      "number": 3,
+      "title": "The System Listens",
+      "purpose": "Reveal relationships between soil, water, waste, care, and justice.",
+      "transition": "No action stays alone; every choice touches another root."
+    },
+    {
+      "id": "chapter-4",
+      "number": 4,
+      "title": "The Tipping Moment",
+      "purpose": "Bring the story to a threshold where repeated choices matter.",
+      "transition": "The Earth leans toward the future that has been practiced."
+    },
+    {
+      "id": "chapter-5",
+      "number": 5,
+      "title": "The Story Becomes a Future",
+      "purpose": "Resolve the chosen path into a final ending and reflection.",
+      "transition": "The last word does not close the world; it reveals the path."
+    }
+  ],
+  "keywords": [
+    {
+      "id": "repair",
+      "label": "repair",
+      "category": "positive",
+      "aliases": ["mend", "fix", "restore object"],
+      "tags": ["care", "waste", "community"],
+      "narrativeMeaning": "Mending, refusing waste, and sharing practical skill.",
+      "preferredEarthState": "repairing"
+    },
+    {
+      "id": "plant",
+      "label": "plant",
+      "category": "positive",
+      "aliases": ["grow", "seed", "reforest"],
+      "tags": ["biodiversity", "soil", "future"],
+      "narrativeMeaning": "Patient future-making through roots, soil, and habitat.",
+      "preferredEarthState": "blooming"
+    },
+    {
+      "id": "share",
+      "label": "share",
+      "category": "positive",
+      "aliases": ["borrow", "exchange", "circulate"],
+      "tags": ["community", "consumption", "care"],
+      "narrativeMeaning": "Reducing excess by circulating tools, food, and knowledge.",
+      "preferredEarthState": "collective"
+    },
+    {
+      "id": "listen",
+      "label": "listen",
+      "category": "positive",
+      "aliases": ["hear", "notice", "attend"],
+      "tags": ["justice", "attention", "humility"],
+      "narrativeMeaning": "Making room for ignored voices and slower knowledge.",
+      "preferredEarthState": "fragile"
+    },
+    {
+      "id": "reduce",
+      "label": "reduce",
+      "category": "positive",
+      "aliases": ["lessen", "cut waste", "use less"],
+      "tags": ["restraint", "waste", "temperature"],
+      "narrativeMeaning": "Restraint that lowers pressure instead of moving harm elsewhere.",
+      "preferredEarthState": "repairing"
+    },
+    {
+      "id": "teach",
+      "label": "teach",
+      "category": "positive",
+      "aliases": ["learn", "show", "pass on"],
+      "tags": ["memory", "community", "future"],
+      "narrativeMeaning": "Knowledge passed forward as shared survival skill.",
+      "preferredEarthState": "collective"
+    },
+    {
+      "id": "protest",
+      "label": "protest",
+      "category": "positive",
+      "aliases": ["refuse", "march", "resist"],
+      "tags": ["justice", "policy", "collective"],
+      "narrativeMeaning": "Collective refusal that pressures harmful systems.",
+      "preferredEarthState": "collective"
+    },
+    {
+      "id": "archive",
+      "label": "archive",
+      "category": "positive",
+      "aliases": ["record", "remember", "document"],
+      "tags": ["memory", "evidence", "accountability"],
+      "narrativeMeaning": "Keeping evidence and memory so damage cannot disappear.",
+      "preferredEarthState": "fragile"
+    },
+    {
+      "id": "restore",
+      "label": "restore",
+      "category": "positive",
+      "aliases": ["rewild", "heal land", "return habitat"],
+      "tags": ["ecology", "biodiversity", "repair"],
+      "narrativeMeaning": "Repairing damaged landscapes and returning living systems.",
+      "preferredEarthState": "blooming"
+    },
+    {
+      "id": "organise",
+      "label": "organise",
+      "category": "positive",
+      "aliases": ["organize", "gather", "coordinate"],
+      "tags": ["collective", "systems", "power"],
+      "narrativeMeaning": "Turning care into shared structure and collective power.",
+      "preferredEarthState": "collective"
+    },
+    {
+      "id": "compost",
+      "label": "compost",
+      "category": "positive",
+      "aliases": ["rot", "mulch", "return scraps"],
+      "tags": ["soil", "waste", "cycle"],
+      "narrativeMeaning": "Decay becoming nourishment instead of discard.",
+      "preferredEarthState": "blooming"
+    },
+    {
+      "id": "extract",
+      "label": "extract",
+      "category": "negative",
+      "aliases": ["mine", "drill", "take"],
+      "tags": ["pressure", "heat", "justice"],
+      "narrativeMeaning": "Taking faster than return is possible.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "consume",
+      "label": "consume",
+      "category": "negative",
+      "aliases": ["buy more", "devour", "overbuy"],
+      "tags": ["waste", "appetite", "disconnection"],
+      "narrativeMeaning": "Endless appetite that turns relation into discard.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "ignore",
+      "label": "ignore",
+      "category": "negative",
+      "aliases": ["deny", "look away", "dismiss"],
+      "tags": ["delay", "silence", "harm"],
+      "narrativeMeaning": "Refusing to hear warnings until harm becomes ordinary.",
+      "preferredEarthState": "silent"
+    },
+    {
+      "id": "waste",
+      "label": "waste",
+      "category": "negative",
+      "aliases": ["pollute", "trash", "spoil"],
+      "tags": ["discard", "pollution", "broken cycle"],
+      "narrativeMeaning": "Materials and lives treated as disposable.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "delay",
+      "label": "delay",
+      "category": "negative",
+      "aliases": ["wait", "postpone", "later"],
+      "tags": ["inaction", "threshold", "risk"],
+      "narrativeMeaning": "Postponed responsibility repeated until it becomes policy.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "exploit",
+      "label": "exploit",
+      "category": "negative",
+      "aliases": ["use up", "profit from harm", "sacrifice"],
+      "tags": ["injustice", "extraction", "harm"],
+      "narrativeMeaning": "Survival for some built on hidden damage elsewhere.",
+      "preferredEarthState": "silent"
+    },
+    {
+      "id": "isolate",
+      "label": "isolate",
+      "category": "negative",
+      "aliases": ["separate", "withdraw", "cut off"],
+      "tags": ["community", "fragility", "loneliness"],
+      "narrativeMeaning": "Weakening resilience by breaking relation.",
+      "preferredEarthState": "fragile"
+    },
+    {
+      "id": "overuse",
+      "label": "overuse",
+      "category": "negative",
+      "aliases": ["drain", "exhaust", "overwork"],
+      "tags": ["water", "soil", "energy"],
+      "narrativeMeaning": "Pressure placed on systems without time to recover.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "discard",
+      "label": "discard",
+      "category": "negative",
+      "aliases": ["throw away", "dump", "abandon"],
+      "tags": ["waste", "loss", "pollution"],
+      "narrativeMeaning": "Breaking responsibility at the moment something leaves the hand.",
+      "preferredEarthState": "warming"
+    },
+    {
+      "id": "greenwash",
+      "label": "greenwash",
+      "category": "negative",
+      "aliases": ["pretend", "perform care", "mask harm"],
+      "tags": ["surface", "delay", "accountability"],
+      "narrativeMeaning": "A polished surface that leaves the damaging pattern intact.",
+      "preferredEarthState": "fragile"
+    },
+    {
+      "id": "technology",
+      "label": "technology",
+      "category": "ambiguous",
+      "aliases": ["tool", "machine", "system"],
+      "tags": ["tools", "justice", "efficiency"],
+      "narrativeMeaning": "Tools that can help, but only when guided by care and justice.",
+      "preferredEarthState": "repairing"
+    },
+    {
+      "id": "protect",
+      "label": "protect",
+      "category": "ambiguous",
+      "aliases": ["guard", "defend", "shelter"],
+      "tags": ["care", "boundary", "justice"],
+      "narrativeMeaning": "Care that must ask who is included and who is left outside.",
+      "preferredEarthState": "blooming"
+    },
+    {
+      "id": "efficiency",
+      "label": "efficiency",
+      "category": "ambiguous",
+      "aliases": ["optimize", "streamline", "save energy"],
+      "tags": ["systems", "consumption", "risk"],
+      "narrativeMeaning": "Less waste when honest, more consumption when used as permission.",
+      "preferredEarthState": "repairing"
+    },
+    {
+      "id": "adapt",
+      "label": "adapt",
+      "category": "ambiguous",
+      "aliases": ["adjust", "survive", "prepare"],
+      "tags": ["survival", "justice", "future"],
+      "narrativeMeaning": "Learning to live with change, unevenly unless care is shared.",
+      "preferredEarthState": "fragile"
+    },
+    {
+      "id": "build",
+      "label": "build",
+      "category": "ambiguous",
+      "aliases": ["make", "construct", "create"],
+      "tags": ["shelter", "growth", "materials"],
+      "narrativeMeaning": "Making shelter or expanding harm, depending on purpose and material.",
+      "preferredEarthState": "fragile"
+    }
+  ],
+  "responses": [
+    {
+      "keyword": "repair",
+      "chapterRange": [1, 5],
+      "narrative": "A crack softens. A tool is shared. What was once waste becomes knowledge.",
+      "earthVoice": "I remember every hand that chooses to mend instead of discard.",
+      "systemFeedback": "Repair reduces waste and strengthens community care.",
+      "nextPrompt": "What else should be mended, shared, or returned?"
+    },
+    {
+      "keyword": "plant",
+      "chapterRange": [1, 5],
+      "narrative": "A small root enters the dark. It does not hurry. It begins by holding the soil together.",
+      "earthVoice": "I grow slowly, but I remember patience.",
+      "systemFeedback": "Planting increases biodiversity and hope.",
+      "nextPrompt": "What could help this new life survive?"
+    },
+    {
+      "keyword": "share",
+      "chapterRange": [1, 5],
+      "narrative": "One object changes hands. Then another. Need becomes lighter when it is carried together.",
+      "earthVoice": "When you share, less is taken from me twice.",
+      "systemFeedback": "Sharing raises community care and lowers consumption pressure.",
+      "nextPrompt": "What should move from private use into common care?"
+    },
+    {
+      "keyword": "listen",
+      "chapterRange": [1, 5],
+      "narrative": "The page grows quieter. Under the noise, a river, a worker, and a child are all speaking.",
+      "earthVoice": "I have been warning you in many voices.",
+      "systemFeedback": "Listening strengthens justice and reveals hidden harm.",
+      "nextPrompt": "Whose voice should guide the next action?"
+    },
+    {
+      "keyword": "reduce",
+      "chapterRange": [1, 5],
+      "narrative": "The demand loosens. A machine rests. The air keeps a little more of its coolness.",
+      "earthVoice": "Less can be a form of care when it is chosen fairly.",
+      "systemFeedback": "Reducing lowers waste and temperature pressure.",
+      "nextPrompt": "What pressure could be lowered next?"
+    },
+    {
+      "keyword": "teach",
+      "chapterRange": [1, 5],
+      "narrative": "A skill passes from one hand to another. The future receives a method, not only a warning.",
+      "earthVoice": "Teach what keeps life possible.",
+      "systemFeedback": "Teaching increases community care, memory, and hope.",
+      "nextPrompt": "What knowledge should not disappear?"
+    },
+    {
+      "keyword": "protest",
+      "chapterRange": [1, 5],
+      "narrative": "Many feet gather at the edge of a decision. The old pattern hears a louder no.",
+      "earthVoice": "A single voice can shake. Many voices can move the frame.",
+      "systemFeedback": "Protest raises justice and collective pressure for change.",
+      "nextPrompt": "What must be refused so repair can begin?"
+    },
+    {
+      "keyword": "archive",
+      "chapterRange": [1, 5],
+      "narrative": "A record is made before the damage is renamed as progress. Memory becomes evidence.",
+      "earthVoice": "Do not let the wound be edited out of the story.",
+      "systemFeedback": "Archiving supports accountability and future repair.",
+      "nextPrompt": "What should be remembered before it is erased?"
+    },
+    {
+      "keyword": "restore",
+      "chapterRange": [1, 5],
+      "narrative": "A damaged place is given time, protection, and return. The first birds arrive as witnesses.",
+      "earthVoice": "I can heal where care stays long enough.",
+      "systemFeedback": "Restoration improves earth health and biodiversity.",
+      "nextPrompt": "Which broken place should receive long care?"
+    },
+    {
+      "keyword": "organise",
+      "chapterRange": [1, 5],
+      "narrative": "The scattered good intentions find a table, a plan, and a shared hour.",
+      "earthVoice": "Care becomes stronger when it learns how to meet again.",
+      "systemFeedback": "Organising raises community care, justice, and tipping score.",
+      "nextPrompt": "Who needs to be gathered for the next change?"
+    },
+    {
+      "keyword": "compost",
+      "chapterRange": [1, 5],
+      "narrative": "The peel, the leaf, the ending of one meal darken into food for another beginning.",
+      "earthVoice": "Return is one of my oldest languages.",
+      "systemFeedback": "Compost lowers waste and supports soil health.",
+      "nextPrompt": "What could return to the cycle instead of the bin?"
+    },
+    {
+      "keyword": "extract",
+      "chapterRange": [1, 5],
+      "narrative": "The ground opens again. Something is taken faster than it can return.",
+      "earthVoice": "I can give, but I cannot remain whole if giving becomes a wound.",
+      "systemFeedback": "Extraction increases heat, waste, and injustice.",
+      "nextPrompt": "What could interrupt this pattern?"
+    },
+    {
+      "keyword": "consume",
+      "chapterRange": [1, 5],
+      "narrative": "The appetite grows larger than the need. Shelves fill while the margin fills with discard.",
+      "earthVoice": "I feel the cost of what is bought to be forgotten.",
+      "systemFeedback": "Consumption increases waste and lowers earth health.",
+      "nextPrompt": "What could replace appetite with relation?"
+    },
+    {
+      "keyword": "ignore",
+      "chapterRange": [1, 5],
+      "narrative": "The warning passes through the room unheard. Outside, the heat keeps its own record.",
+      "earthVoice": "Silence from you does not make me silent.",
+      "systemFeedback": "Ignoring lowers hope and allows pressure to rise.",
+      "nextPrompt": "What would it mean to pay attention now?"
+    },
+    {
+      "keyword": "waste",
+      "chapterRange": [1, 5],
+      "narrative": "A useful thing is renamed as nothing. The river receives what the hand refuses to hold.",
+      "earthVoice": "There is no away inside me.",
+      "systemFeedback": "Waste damages earth health and blocks living cycles.",
+      "nextPrompt": "What could be repaired, reduced, or returned?"
+    },
+    {
+      "keyword": "delay",
+      "chapterRange": [1, 5],
+      "narrative": "The decision is placed gently into tomorrow. Tomorrow grows heavier.",
+      "earthVoice": "I can wait for seasons, but not for endless postponement.",
+      "systemFeedback": "Delay raises tipping risk and weakens hope.",
+      "nextPrompt": "What small action could happen before later arrives?"
+    },
+    {
+      "keyword": "exploit",
+      "chapterRange": [1, 5],
+      "narrative": "A bright place is protected by making another place carry the harm.",
+      "earthVoice": "A hidden wound is still part of my body.",
+      "systemFeedback": "Exploitation lowers justice and fragments survival.",
+      "nextPrompt": "Who is paying for this comfort?"
+    },
+    {
+      "keyword": "isolate",
+      "chapterRange": [1, 5],
+      "narrative": "The doors close one by one. When the storm comes, fewer hands can reach each other.",
+      "earthVoice": "Separated care becomes easier to break.",
+      "systemFeedback": "Isolation lowers community care and resilience.",
+      "nextPrompt": "What connection could be restored?"
+    },
+    {
+      "keyword": "overuse",
+      "chapterRange": [1, 5],
+      "narrative": "The well gives again, then less, then silence. Need has been taught to ignore limits.",
+      "earthVoice": "Even abundance needs rest.",
+      "systemFeedback": "Overuse raises pressure on water, soil, and energy.",
+      "nextPrompt": "Where should recovery time be protected?"
+    },
+    {
+      "keyword": "discard",
+      "chapterRange": [1, 5],
+      "narrative": "The hand lets go, but the story does not end. The discarded thing keeps traveling.",
+      "earthVoice": "What leaves you still arrives somewhere in me.",
+      "systemFeedback": "Discard increases waste and weakens responsibility.",
+      "nextPrompt": "What could be kept in relation instead?"
+    },
+    {
+      "keyword": "greenwash",
+      "chapterRange": [1, 5],
+      "narrative": "The label turns green. The river does not. A promise shines where repair should be.",
+      "earthVoice": "Do not paint the wound and call it healing.",
+      "systemFeedback": "Greenwashing raises delay and lowers accountability.",
+      "nextPrompt": "What proof should replace the promise?"
+    },
+    {
+      "keyword": "technology",
+      "chapterRange": [1, 5],
+      "narrative": "A machine becomes cleaner. The numbers improve. The story asks who it serves.",
+      "earthVoice": "Tools can help, but they cannot listen for you.",
+      "systemFeedback": "Technology can reduce harm when guided by justice and care.",
+      "nextPrompt": "What should guide the tool: care, justice, or profit?"
+    },
+    {
+      "keyword": "protect",
+      "chapterRange": [1, 5],
+      "narrative": "A boundary is drawn around what remains alive. The line must be watched for who it excludes.",
+      "earthVoice": "Protection is care only when it does not abandon others.",
+      "systemFeedback": "Protection supports biodiversity, but unequal protection lowers justice.",
+      "nextPrompt": "Who is included in this protection?"
+    },
+    {
+      "keyword": "efficiency",
+      "chapterRange": [1, 5],
+      "narrative": "The system uses less to do the same thing. Then it is asked to do more and more.",
+      "earthVoice": "Saving energy matters. So does asking why the demand keeps growing.",
+      "systemFeedback": "Efficiency may reduce waste, but can hide rising consumption.",
+      "nextPrompt": "What limit should guide the improvement?"
+    },
+    {
+      "keyword": "adapt",
+      "chapterRange": [1, 5],
+      "narrative": "The people learn new routes, new shade, new times for work. Some are given maps; some are left heat.",
+      "earthVoice": "Adaptation without justice is only uneven survival.",
+      "systemFeedback": "Adaptation raises resilience when shared fairly.",
+      "nextPrompt": "Who needs help adapting first?"
+    },
+    {
+      "keyword": "build",
+      "chapterRange": [1, 5],
+      "narrative": "A structure rises. It could shelter many, or it could take more ground than it gives back.",
+      "earthVoice": "Make with me, not only on top of me.",
+      "systemFeedback": "Building can support care or increase extraction, depending on materials and purpose.",
+      "nextPrompt": "What is being built, and for whom?"
+    }
+  ],
+  "branchPrompts": [
+    {
+      "id": "branch-river-low",
+      "chapter": 3,
+      "prompt": "The river is lower than it remembers. What do you offer first?",
+      "choices": ["restore", "ignore", "extract", "listen"],
+      "emotionalTone": "Quiet, tense, attentive.",
+      "endingSupportNotes": "Restore and listen support Regenerative Earth or Fragile Balance. Extract and ignore support Collapse Story or Unequal Survival."
+    },
+    {
+      "id": "branch-heat-margin",
+      "chapter": 4,
+      "prompt": "The heat gathers at the margin of the city. Which word moves next?",
+      "choices": ["organise", "technology", "delay", "protect"],
+      "emotionalTone": "Urgent but controlled.",
+      "endingSupportNotes": "Organise supports Regenerative Earth. Technology supports Technological Green Future. Protect may support Unequal Survival if justice is low. Delay supports Collapse Story."
+    },
+    {
+      "id": "branch-broken-tool",
+      "chapter": 2,
+      "prompt": "A broken tool lies between repair and replacement. What happens to it?",
+      "choices": ["repair", "share", "discard", "consume"],
+      "emotionalTone": "Practical, intimate, small-scale.",
+      "endingSupportNotes": "Repair and share build tipping score. Discard and consume increase waste and warming."
+    },
+    {
+      "id": "branch-forest-edge",
+      "chapter": 4,
+      "prompt": "At the forest edge, a fence appears. What does protection mean here?",
+      "choices": ["protect", "listen", "exploit", "archive"],
+      "emotionalTone": "Ambiguous, ethical, watchful.",
+      "endingSupportNotes": "Protect with listen supports justice. Protect without listen may lead to Unequal Survival. Exploit supports Collapse Story. Archive supports accountability."
+    },
+    {
+      "id": "branch-clean-machine",
+      "chapter": 4,
+      "prompt": "A clean machine promises a cleaner future. What must stand beside it?",
+      "choices": ["technology", "efficiency", "justice", "greenwash"],
+      "emotionalTone": "Analytical and uneasy.",
+      "endingSupportNotes": "Technology and efficiency can support Technological Green Future. Justice is required for Regenerative Earth. Greenwash pushes toward Fragile Balance or Collapse Story."
+    }
+  ],
+  "endings": [
+    {
+      "id": "regenerative-earth",
+      "title": "Regenerative Earth",
+      "condition": "High earthHealth, high communityCare, high justice, low waste, repeated positive keywords.",
+      "summary": "The Earth did not become perfect. It became connected again. Every small action found another, until repair became a pattern strong enough to change the weather of the story.",
+      "earthVoice": "I was not saved by one word. I was changed by what kept returning.",
+      "reflectionPrompt": "Which action could become a pattern in your own community?",
+      "suggestedFinalVisualState": "tipping",
+      "commonKeywords": ["repair", "share", "organise", "restore", "plant"]
+    },
+    {
+      "id": "fragile-balance",
+      "title": "Fragile Balance",
+      "condition": "Mixed variables, no extreme collapse, limited positive tipping.",
+      "summary": "The Earth remains between two futures. Some wounds soften. Some heat stays. The story is not saved, not lost, and still listening for what repeats next.",
+      "earthVoice": "I am not finished. Neither is your story.",
+      "reflectionPrompt": "What would move this balance toward repair?",
+      "suggestedFinalVisualState": "fragile",
+      "commonKeywords": ["listen", "adapt", "reduce", "delay", "protect"]
+    },
+    {
+      "id": "technological-green-future",
+      "title": "Technological Green Future",
+      "condition": "High technology or efficiency, moderate health, justice not consistently high.",
+      "summary": "The machines become cleaner. The numbers improve. Yet the old habits remain underneath, waiting to grow whenever care is replaced by speed.",
+      "earthVoice": "A tool without care can polish the surface of a wound.",
+      "reflectionPrompt": "What kind of technology also changes the relationship?",
+      "suggestedFinalVisualState": "repairing",
+      "commonKeywords": ["technology", "efficiency", "build", "reduce", "greenwash"]
+    },
+    {
+      "id": "unequal-survival",
+      "title": "Unequal Survival",
+      "condition": "Some health or protection, low justice, high exploitation or isolation.",
+      "summary": "Some places are cooled, guarded, and repaired. Others are asked to carry the heat. The Earth survives unevenly, and the protected future remains broken at its edge.",
+      "earthVoice": "A future that leaves some bodies behind is still a broken future.",
+      "reflectionPrompt": "Who is included in the repair?",
+      "suggestedFinalVisualState": "collective-fragmented",
+      "commonKeywords": ["protect", "exploit", "isolate", "adapt", "technology"]
+    },
+    {
+      "id": "collapse-story",
+      "title": "Collapse Story",
+      "condition": "Very low earthHealth, high waste, high temperature, repeated negative keywords.",
+      "summary": "The Earth does not end in one moment. It frays through postponed decisions, hidden wounds, and warnings heard too late. Even here, the last page asks what pattern must stop first.",
+      "earthVoice": "I tried to warn you in heat, silence, flood, and dust.",
+      "reflectionPrompt": "What repeated pattern would need to stop first?",
+      "suggestedFinalVisualState": "collapsing",
+      "commonKeywords": ["extract", "consume", "ignore", "waste", "delay"]
+    }
+  ],
+  "fallbackResponses": [
+    {
+      "id": "fallback-unclear",
+      "case": "input is unclear",
+      "narrative": "The word arrives blurred, but the Earth still turns toward it.",
+      "earthVoice": "Try a word I can feel as an action.",
+      "systemFeedback": "Choose a clearer action such as repair, plant, share, listen, or reduce.",
+      "nextPrompt": "What action do you want to offer?"
+    },
+    {
+      "id": "fallback-too-abstract",
+      "case": "input is too abstract",
+      "narrative": "The idea is large. The page asks for the first small movement inside it.",
+      "earthVoice": "Give me the action hidden inside the thought.",
+      "systemFeedback": "Abstract input needs a concrete ecological action.",
+      "nextPrompt": "What could someone actually do?"
+    },
+    {
+      "id": "fallback-unrecognised",
+      "case": "input is not recognised",
+      "narrative": "The word is unfamiliar, but it is not rejected. It waits at the edge of the path.",
+      "earthVoice": "I am listening. Choose the closest action and try again.",
+      "systemFeedback": "No exact keyword match found.",
+      "nextPrompt": "Try repair, plant, share, listen, reduce, extract, consume, or technology."
+    },
+    {
+      "id": "fallback-empty",
+      "case": "input is empty",
+      "narrative": "For a moment, nothing is offered. The fragile Earth keeps waiting.",
+      "earthVoice": "A blank page can still begin.",
+      "systemFeedback": "Enter or select a keyword to continue.",
+      "nextPrompt": "Type one small action."
+    }
+  ],
+  "archiveAndEndingCardCopy": {
+    "chosenWords": "Chosen words",
+    "yourStoryPath": "Your story path",
+    "earthStatus": "Earth status",
+    "finalState": "Final state",
+    "restart": "Restart",
+    "saveThisEnding": "Save this ending",
+    "archiveOfStories": "Archive of stories",
+    "collectiveFutures": "Collective futures",
+    "endingCardLabel": "Ending card",
+    "printableFieldNote": "Printable field note",
+    "pathSummary": "A future published by your repeated choices",
+    "emptyArchive": "No stories have been saved yet.",
+    "returnToStory": "Return to story",
+    "tryAnotherPath": "Try another path"
+  },
+  "storyQaNotes": [
+    "Positive responses avoid claiming that one action saves the Earth.",
+    "Negative responses name consequence without scolding the reader.",
+    "Technology, protection, efficiency, adaptation, and building remain conditional on justice and care.",
+    "Most UI-facing lines are one sentence and suitable for a storybook panel.",
+    "Justice and community care appear across the branch prompts and endings."
+  ],
+  "handoff": {
+    "completed": [
+      "Story approach statement",
+      "One-page story bible",
+      "Prologue copy set",
+      "Five-chapter map",
+      "Keyword vocabulary with aliases, tags, meanings, and preferred Earth states",
+      "Twenty-six keyword response sets",
+      "Five branching prompts",
+      "Five required endings",
+      "Fallback responses",
+      "Archive and ending card UI copy",
+      "Story QA notes"
+    ],
+    "unresolved": [
+      "Final variable effect numbers should be assigned by Development.",
+      "Final visual treatment for collective-fragmented state should be confirmed by Design.",
+      "The branch choice keyword justice is referenced as a concept; Development may map it to listen, protest, or organise if no justice keyword is implemented."
+    ],
+    "assumptions": [
+      "The prototype will use five interaction rounds.",
+      "The content file can be consumed directly or split into smaller JSON files later.",
+      "British spelling is acceptable for organise, with organize listed as an alias.",
+      "The story remains in English to match the provided project documents."
+    ],
+    "dependenciesOnOtherModules": [
+      "Development should connect keyword IDs to state variables and ending logic.",
+      "Design should map preferredEarthState values to the final Earth assets.",
+      "Owner should approve whether protect is treated as ambiguous rather than purely positive."
+    ],
+    "filesProduced": [
+      "story-content.json"
+    ],
+    "reviewQuestionsForOwner": [
+      "Should the public-facing copy stay in English, or should it be translated for the final submission?",
+      "Should the project include the optional archive screen in the MVP?",
+      "Should the final story use British spelling consistently, including organise?",
+      "Do you want a sixth ending for a strongly collective justice path?"
+    ]
+  }
+}

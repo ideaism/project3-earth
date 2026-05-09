@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" role="img" aria-labelledby="title">
+  <title id="title">Repair glow effect</title>
+  <defs>
+    <radialGradient id="repairGlow" cx="50%" cy="50%" r="48%">
+      <stop offset="0%" stop-color="#fff8ea" stop-opacity="0.45"/>
+      <stop offset="52%" stop-color="#d9b85f" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#3d6650" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="800" cy="800" r="720" fill="url(#repairGlow)"/>
+  <g fill="#d9b85f" opacity="0.68">
+    <circle cx="510" cy="640" r="18"/>
+    <circle cx="1090" cy="710" r="15"/>
+    <circle cx="742" cy="1115" r="20"/>
+    <circle cx="920" cy="430" r="13"/>
+  </g>
+</svg>
