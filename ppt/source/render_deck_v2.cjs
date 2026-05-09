@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
-const pptxgen = require("pptxgenjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const ASSET_DIR = path.join(ROOT, "assets");
@@ -13,7 +12,7 @@ for (const dir of [ASSET_DIR, SLIDES_DIR, QA_DIR, OUTPUT_DIR]) fs.mkdirSync(dir,
 
 const W = 1920;
 const H = 1080;
-const OUT = path.join(OUTPUT_DIR, "a-website-that-tips-earth-story-v2.pptx");
+const OUT = path.join(OUTPUT_DIR, "the-earth-written-by-us-radical-earth.html");
 
 const C = {
   ink: "#10212b",
@@ -133,7 +132,7 @@ const earthStates = path.join(ASSET_DIR, "earth-states-generated.png");
 const slides = [
   () => {
     const hero = imgData(titleHero);
-    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}<image href="${hero}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/><rect width="${W}" height="${H}" fill="#10212b" opacity=".48"/><text x="98" y="104" font-family="Inter, Arial" font-size="27" fill="#f6f0e6" letter-spacing="2">INTERACTIVE WEB PUBLICATION</text>${t("A Website That Tips", 96, 265, 790, { size: 95, fill: C.white, weight: 790, maxChars: 15, lineHeight: 100 })}${t("An Earth Story You Can Change", 100, 472, 720, { size: 38, fill: "#efe4ce", maxChars: 36, lineHeight: 46 })}<rect x="100" y="820" width="620" height="72" rx="36" fill="#f6f0e6" opacity=".92"/><text x="410" y="866" font-family="Inter, Arial" font-size="27" font-weight="700" fill="${C.ink}" text-anchor="middle">Prototype + publishing strategy</text></svg>`;
+    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}<image href="${hero}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/><rect width="${W}" height="${H}" fill="#10212b" opacity=".48"/><text x="98" y="104" font-family="Inter, Arial" font-size="27" fill="#f6f0e6" letter-spacing="2">THE BRIEF</text>${t(["Publishing Forms:", "Radical Earth"], 96, 255, 900, { size: 92, fill: C.white, weight: 790, lineHeight: 100 })}${t("The Earth, Written by Us", 100, 512, 760, { size: 42, fill: "#efe4ce", weight: 760, maxChars: 36, lineHeight: 50 })}${t("An Earth Story You Can Change", 100, 578, 720, { size: 32, fill: "#efe4ce", maxChars: 36, lineHeight: 42 })}<rect x="100" y="820" width="620" height="72" rx="36" fill="#f6f0e6" opacity=".92"/><text x="410" y="866" font-family="Inter, Arial" font-size="27" font-weight="700" fill="${C.ink}" text-anchor="middle">Prototype + publishing strategy</text></svg>`;
   },
   () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(2, "Brief Interpretation", "Publishing beyond the static printed page.")}
     ${card(115, 375, 500, 385, t("The brief asks for a resolved publishing platform or event, not only a book.", 160, 455, 390, { size: 35, weight: 700, maxChars: 24, lineHeight: 45 }), "#fff8ea")}
@@ -240,19 +239,176 @@ async function contactSheet() {
   await sharp({ create: { width: tw * 4, height: th * 4, channels: 4, background: C.paper } }).composite(comps).png().toFile(path.join(QA_DIR, "contact-sheet-v2.png"));
 }
 
-async function pptx() {
-  const deck = new pptxgen();
-  deck.defineLayout({ name: "CUSTOM_WIDE", width: 13.333333, height: 7.5 });
-  deck.layout = "CUSTOM_WIDE";
-  deck.author = "Codex";
-  deck.subject = "Radical Earth interactive web publication";
-  deck.title = "A Website That Tips";
-  for (let i = 1; i <= slides.length; i += 1) {
-    const s = deck.addSlide();
-    s.background = { color: "F6F0E6" };
-    s.addImage({ path: path.join(SLIDES_DIR, `slide-${String(i).padStart(2, "0")}.png`), x: 0, y: 0, w: 13.333333, h: 7.5 });
-  }
-  await deck.writeFile({ fileName: OUT });
+function html() {
+  const slideItems = slides
+    .map((_, i) => {
+      const n = String(i + 1).padStart(2, "0");
+      return `<section class="slide" id="slide-${n}" aria-label="Slide ${i + 1} of ${slides.length}">
+        <img src="../slides-v2/slide-${n}.png" alt="Slide ${i + 1}" />
+      </section>`;
+    })
+    .join("\n");
+
+  const navItems = slides
+    .map((_, i) => {
+      const n = String(i + 1).padStart(2, "0");
+      return `<a href="#slide-${n}" aria-label="Go to slide ${i + 1}">${i + 1}</a>`;
+    })
+    .join("");
+
+  const doc = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publishing Forms: Radical Earth — The Earth, Written by Us</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #181f22;
+      --paper: #f6f0e6;
+      --ink: #10212b;
+      --muted: #6b767a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--paper);
+    }
+    .topbar {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 18px;
+      background: rgba(16, 33, 43, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(246, 240, 230, 0.12);
+    }
+    .topbar strong { font-size: 15px; letter-spacing: .02em; }
+    .topbar span { color: rgba(246, 240, 230, .74); font-size: 13px; }
+    .deck {
+      min-height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: auto;
+    }
+    .slide {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 58px 18px 26px;
+      scroll-snap-align: start;
+    }
+    .slide img {
+      width: min(100%, calc((100vh - 94px) * 16 / 9));
+      max-height: calc(100vh - 94px);
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.42);
+      background: var(--paper);
+    }
+    .nav {
+      position: fixed;
+      z-index: 6;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(16, 33, 43, 0.82);
+      backdrop-filter: blur(10px);
+    }
+    .nav a {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: var(--paper);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .nav a:hover, .nav a:focus-visible {
+      outline: none;
+      background: #f6f0e6;
+      color: var(--ink);
+    }
+    .hint { display: inline; }
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; padding: 10px 14px; }
+      .hint { display: none; }
+      .slide { padding-top: 76px; }
+      .nav { max-width: calc(100vw - 24px); overflow-x: auto; }
+    }
+    @media print {
+      body { background: white; }
+      .topbar, .nav { display: none; }
+      .deck { overflow: visible; }
+      .slide {
+        min-height: auto;
+        padding: 0;
+        page-break-after: always;
+      }
+      .slide img {
+        width: 100%;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <strong>Publishing Forms: Radical Earth</strong>
+    <span>The Earth, Written by Us <span class="hint">· use ← / → keys to navigate</span></span>
+  </header>
+  <main class="deck">
+${slideItems}
+  </main>
+  <nav class="nav" aria-label="Slide navigation">${navItems}</nav>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    function currentIndex() {
+      const center = window.scrollY + window.innerHeight / 2;
+      let best = 0;
+      let bestDistance = Infinity;
+      slides.forEach((slide, index) => {
+        const middle = slide.offsetTop + slide.offsetHeight / 2;
+        const distance = Math.abs(center - middle);
+        if (distance < bestDistance) {
+          best = index;
+          bestDistance = distance;
+        }
+      });
+      return best;
+    }
+    window.addEventListener("keydown", (event) => {
+      if (!["ArrowRight", "ArrowDown", "PageDown", "ArrowLeft", "ArrowUp", "PageUp", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let next = currentIndex();
+      if (["ArrowRight", "ArrowDown", "PageDown"].includes(event.key)) next += 1;
+      if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) next -= 1;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = slides.length - 1;
+      slides[Math.max(0, Math.min(slides.length - 1, next))].scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>`;
+  fs.writeFileSync(OUT, doc);
 }
 
 function missingList() {
@@ -290,6 +446,6 @@ function missingList() {
   missingList();
   await renderSlides();
   await contactSheet();
-  await pptx();
+  html();
   console.log(OUT);
 })();

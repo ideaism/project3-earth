@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publishing Forms: Radical Earth — The Earth, Written by Us</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #181f22;
+      --paper: #f6f0e6;
+      --ink: #10212b;
+      --muted: #6b767a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--paper);
+    }
+    .topbar {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 18px;
+      background: rgba(16, 33, 43, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(246, 240, 230, 0.12);
+    }
+    .topbar strong { font-size: 15px; letter-spacing: .02em; }
+    .topbar span { color: rgba(246, 240, 230, .74); font-size: 13px; }
+    .deck {
+      min-height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: auto;
+    }
+    .slide {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 58px 18px 26px;
+      scroll-snap-align: start;
+    }
+    .slide img {
+      width: min(100%, calc((100vh - 94px) * 16 / 9));
+      max-height: calc(100vh - 94px);
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.42);
+      background: var(--paper);
+    }
+    .nav {
+      position: fixed;
+      z-index: 6;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(16, 33, 43, 0.82);
+      backdrop-filter: blur(10px);
+    }
+    .nav a {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: var(--paper);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .nav a:hover, .nav a:focus-visible {
+      outline: none;
+      background: #f6f0e6;
+      color: var(--ink);
+    }
+    .hint { display: inline; }
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; padding: 10px 14px; }
+      .hint { display: none; }
+      .slide { padding-top: 76px; }
+      .nav { max-width: calc(100vw - 24px); overflow-x: auto; }
+    }
+    @media print {
+      body { background: white; }
+      .topbar, .nav { display: none; }
+      .deck { overflow: visible; }
+      .slide {
+        min-height: auto;
+        padding: 0;
+        page-break-after: always;
+      }
+      .slide img {
+        width: 100%;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <strong>Publishing Forms: Radical Earth</strong>
+    <span>The Earth, Written by Us <span class="hint">· use ← / → keys to navigate</span></span>
+  </header>
+  <main class="deck">
+<section class="slide" id="slide-01" aria-label="Slide 1 of 16">
+        <img src="../slides-v2/slide-01.png" alt="Slide 1" />
+      </section>
+<section class="slide" id="slide-02" aria-label="Slide 2 of 16">
+        <img src="../slides-v2/slide-02.png" alt="Slide 2" />
+      </section>
+<section class="slide" id="slide-03" aria-label="Slide 3 of 16">
+        <img src="../slides-v2/slide-03.png" alt="Slide 3" />
+      </section>
+<section class="slide" id="slide-04" aria-label="Slide 4 of 16">
+        <img src="../slides-v2/slide-04.png" alt="Slide 4" />
+      </section>
+<section class="slide" id="slide-05" aria-label="Slide 5 of 16">
+        <img src="../slides-v2/slide-05.png" alt="Slide 5" />
+      </section>
+<section class="slide" id="slide-06" aria-label="Slide 6 of 16">
+        <img src="../slides-v2/slide-06.png" alt="Slide 6" />
+      </section>
+<section class="slide" id="slide-07" aria-label="Slide 7 of 16">
+        <img src="../slides-v2/slide-07.png" alt="Slide 7" />
+      </section>
+<section class="slide" id="slide-08" aria-label="Slide 8 of 16">
+        <img src="../slides-v2/slide-08.png" alt="Slide 8" />
+      </section>
+<section class="slide" id="slide-09" aria-label="Slide 9 of 16">
+        <img src="../slides-v2/slide-09.png" alt="Slide 9" />
+      </section>
+<section class="slide" id="slide-10" aria-label="Slide 10 of 16">
+        <img src="../slides-v2/slide-10.png" alt="Slide 10" />
+      </section>
+<section class="slide" id="slide-11" aria-label="Slide 11 of 16">
+        <img src="../slides-v2/slide-11.png" alt="Slide 11" />
+      </section>
+<section class="slide" id="slide-12" aria-label="Slide 12 of 16">
+        <img src="../slides-v2/slide-12.png" alt="Slide 12" />
+      </section>
+<section class="slide" id="slide-13" aria-label="Slide 13 of 16">
+        <img src="../slides-v2/slide-13.png" alt="Slide 13" />
+      </section>
+<section class="slide" id="slide-14" aria-label="Slide 14 of 16">
+        <img src="../slides-v2/slide-14.png" alt="Slide 14" />
+      </section>
+<section class="slide" id="slide-15" aria-label="Slide 15 of 16">
+        <img src="../slides-v2/slide-15.png" alt="Slide 15" />
+      </section>
+<section class="slide" id="slide-16" aria-label="Slide 16 of 16">
+        <img src="../slides-v2/slide-16.png" alt="Slide 16" />
+      </section>
+  </main>
+  <nav class="nav" aria-label="Slide navigation"><a href="#slide-01" aria-label="Go to slide 1">1</a><a href="#slide-02" aria-label="Go to slide 2">2</a><a href="#slide-03" aria-label="Go to slide 3">3</a><a href="#slide-04" aria-label="Go to slide 4">4</a><a href="#slide-05" aria-label="Go to slide 5">5</a><a href="#slide-06" aria-label="Go to slide 6">6</a><a href="#slide-07" aria-label="Go to slide 7">7</a><a href="#slide-08" aria-label="Go to slide 8">8</a><a href="#slide-09" aria-label="Go to slide 9">9</a><a href="#slide-10" aria-label="Go to slide 10">10</a><a href="#slide-11" aria-label="Go to slide 11">11</a><a href="#slide-12" aria-label="Go to slide 12">12</a><a href="#slide-13" aria-label="Go to slide 13">13</a><a href="#slide-14" aria-label="Go to slide 14">14</a><a href="#slide-15" aria-label="Go to slide 15">15</a><a href="#slide-16" aria-label="Go to slide 16">16</a></nav>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    function currentIndex() {
+      const center = window.scrollY + window.innerHeight / 2;
+      let best = 0;
+      let bestDistance = Infinity;
+      slides.forEach((slide, index) => {
+        const middle = slide.offsetTop + slide.offsetHeight / 2;
+        const distance = Math.abs(center - middle);
+        if (distance < bestDistance) {
+          best = index;
+          bestDistance = distance;
+        }
+      });
+      return best;
+    }
+    window.addEventListener("keydown", (event) => {
+      if (!["ArrowRight", "ArrowDown", "PageDown", "ArrowLeft", "ArrowUp", "PageUp", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let next = currentIndex();
+      if (["ArrowRight", "ArrowDown", "PageDown"].includes(event.key)) next += 1;
+      if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) next -= 1;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = slides.length - 1;
+      slides[Math.max(0, Math.min(slides.length - 1, next))].scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
