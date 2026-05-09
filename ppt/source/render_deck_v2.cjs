@@ -5,6 +5,7 @@ const sharp = require("sharp");
 const ROOT = path.resolve(__dirname, "..");
 const ASSET_DIR = path.join(ROOT, "assets");
 const PROTO_DIR = path.join(ASSET_DIR, "prototype");
+const WORKSHOP_DIR = path.join(ASSET_DIR, "workshop");
 const SLIDES_DIR = path.join(ROOT, "slides-v2");
 const QA_DIR = path.join(ROOT, "qa");
 const OUTPUT_DIR = path.join(ROOT, "output");
@@ -147,11 +148,20 @@ const slides = [
     ${card(105, 350, 760, 560, `${t("Living Earth", 150, 420, 300, { size: 36, weight: 800 })}${globe(485, 650, 170, "repair")}${t("Health, biodiversity, care, justice, waste and hope are stored as hidden variables.", 185, 855, 560, { size: 28, fill: C.slate, maxChars: 52, lineHeight: 35 })}`, "#f8fbf4")}
     ${card(1020, 350, 790, 560, `<rect x="1095" y="430" width="640" height="320" rx="12" fill="#fffdf6" stroke="${C.line}" stroke-width="3"/><line x1="1415" y1="430" x2="1415" y2="750" stroke="${C.line}" stroke-width="3"/>${t("Chapter 03", 1145, 500, 230, { size: 28, fill: C.coral, weight: 800 })}${t("A word enters the page. The story answers with consequence.", 1145, 560, 230, { size: 29, maxChars: 17, lineHeight: 38 })}${t("keyword", 1470, 520, 170, { size: 25, fill: C.slate, weight: 700 })}<rect x="1470" y="545" width="210" height="58" rx="29" fill="${C.mint}" stroke="${C.green}" stroke-width="2"/><text x="1575" y="583" text-anchor="middle" font-family="Inter, Arial" font-size="26" font-weight="700" fill="${C.ink}">repair</text>${t("Storybook Dialogue", 1095, 830, 480, { size: 36, weight: 800 })}`, "#fff7e8")}
     <path d="M880 635 C950 572 965 572 1010 635" stroke="${C.amber}" stroke-width="9" fill="none" marker-end="url(#arrow)"/></svg>`,
-  () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(5, "World Earth Day research evidence", "Workshop ideas are translated into concrete mechanics.")}
-    ${card(105, 350, 575, 520, `${t("Workshop evidence", 155, 420, 390, { size: 34, weight: 800 })}${t("[TO FILL] Add a workshop photo, note scan, quote, or observed keywords from World Earth Day.", 155, 510, 390, { size: 30, fill: C.red, maxChars: 32, lineHeight: 39 })}`, "#fff8ea")}
-    <circle cx="990" cy="610" r="138" fill="${C.ink}" filter="url(#shadow)"/><text x="990" y="600" text-anchor="middle" font-family="Inter, Arial" font-size="32" font-weight="800" fill="${C.white}">Story</text><text x="990" y="642" text-anchor="middle" font-family="Inter, Arial" font-size="32" font-weight="800" fill="${C.white}">mechanics</text>
-    ${[["positive tipping points", 785, 370, C.mint, C.green], ["systems thinking", 1230, 370, "#e7eef1", C.blue], ["small actions", 785, 785, "#fff1d6", C.amber], ["collective change", 1230, 785, "#f8dfd9", C.coral]].map(([l, x, y, f, s]) => `${pill(x, y, l, f, s, 340)}<path d="M${x + 170} ${y + 55} Q990 ${y < 600 ? 470 : 750} 990 610" stroke="${s}" stroke-width="4" fill="none" opacity=".66"/>`).join("")}
-    ${t("Current insight to use: climate action appears as repeated small gestures, not one heroic solution. This becomes the repeated keyword loop.", 760, 910, 970, { size: 30, fill: C.slate, maxChars: 72, lineHeight: 38 })}</svg>`,
+  () => {
+    const floor = imgData(path.join(WORKSHOP_DIR, "workshop-floor-cards.jpg"));
+    const group = imgData(path.join(WORKSHOP_DIR, "group-systems-game.jpg"));
+    const tipping = imgData(path.join(WORKSHOP_DIR, "positive-tipping-report.jpg"));
+    const feedback = imgData(path.join(WORKSHOP_DIR, "responsibility-freedom-loop.jpg"));
+    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(5, "World Earth Day research evidence", "Power of Positive Tipping Points / Systems Games Workshop, 22 April 2026.")}
+    <image href="${floor}" x="95" y="348" width="520" height="358" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    <image href="${group}" x="95" y="730" width="520" height="235" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    ${card(665, 350, 500, 615, `${t("Experiment Log 04", 715, 420, 340, { size: 32, weight: 800 })}${t("Power of Positive Tipping Points", 715, 475, 350, { size: 29, weight: 700, maxChars: 30, lineHeight: 37 })}${t("Format: Earth Day workshop / field participation", 715, 575, 350, { size: 27, fill: C.slate, maxChars: 31, lineHeight: 35 })}${t("Focus: systems thinking, tipping points, adaptation and feedback.", 715, 675, 350, { size: 27, fill: C.slate, maxChars: 31, lineHeight: 35 })}${t("Insight: the room became the interface. Rules, timing and misunderstanding made system relations visible.", 715, 790, 350, { size: 28, fill: C.ink, maxChars: 31, lineHeight: 36 })}`, "#fffaf1")}
+    <image href="${tipping}" x="1215" y="350" width="290" height="282" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    <image href="${feedback}" x="1528" y="350" width="290" height="282" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+    ${card(1215, 665, 603, 300, `${t("Translation into the web publication", 1260, 730, 440, { size: 32, weight: 800 })}${pill(1260, 790, "physical system game", "#fff1d6", C.amber, 310)}${pill(1585, 790, "keyword loop", C.mint, C.green, 220)}${t("Small repeated actions become interaction logic: word → feedback → changed Earth state → next choice.", 1260, 880, 470, { size: 28, fill: C.slate, maxChars: 45, lineHeight: 36 })}`, "#f2f8f0")}
+    </svg>`;
+  },
   () => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">${bg()}${title(6, "Audience and encounter context", "A narrower audience makes the publishing format more convincing.")}
     ${card(125, 365, 760, 420, `${t("Primary audience", 180, 435, 420, { size: 36, weight: 800 })}${t("WSA design students and World Earth Day workshop participants.", 180, 515, 570, { size: 34, maxChars: 38, lineHeight: 44 })}${t("They already share the brief context and can test whether the story system makes climate action feel participatory.", 180, 650, 570, { size: 28, fill: C.slate, maxChars: 47, lineHeight: 36 })}`, "#f2f8f0")}
     ${card(1035, 365, 760, 420, `${t("Secondary audience", 1090, 435, 420, { size: 36, weight: 800 })}${t("Exhibition visitors and online readers interested in climate storytelling.", 1090, 515, 570, { size: 34, maxChars: 37, lineHeight: 44 })}${t("Encounter: type one word, receive a story response, watch Earth change, save or take away an ending card.", 1090, 650, 570, { size: 28, fill: C.slate, maxChars: 48, lineHeight: 36 })}`, "#fff8ea")}
@@ -412,7 +422,12 @@ ${slideItems}
 }
 
 function missingList() {
-  const md = `# Missing Material To Fill
+  const md = `# Updated Missing Material To Fill
+
+Already added:
+- Earth Day Experiment Log 04: Power of Positive Tipping Points / Systems Games Workshop.
+- Workshop date/place/focus: 22 April 2026, West Side Lecture Theatre, systems thinking, tipping points, adaptation, feedback.
+- Workshop process photos showing floor-card participation, group activity, positive tipping points, feedback loops and complex-system slides.
 
 1. Original given content
    - Title / author / source of the assigned text.
@@ -420,12 +435,12 @@ function missingList() {
    - Tone of voice, key phrases, recurring motifs, narrative rhythm.
    - Confirmation: full text, selected fragments, rewritten chapters, or intentional edited version.
 
-2. World Earth Day evidence
-   - Workshop photos, note scans, sketchbook pages, participant quotes, or recorded keywords.
-   - One concrete insight linking workshop activity to the website mechanics.
+2. Source-to-story mapping
+   - Which exact lines or ideas from the original text become keywords, chapters, Earth states and endings.
+   - A short paragraph explaining why the text is edited into an interactive story rather than reproduced in full.
 
 3. Process and iteration evidence
-   - Early sketches, failed UI versions, system diagrams, paper prototypes.
+   - Early sketches, failed UI versions, system diagrams, paper prototypes beyond the Earth Day workshop evidence.
    - User testing notes or peer feedback.
    - Before/after screenshots showing what changed.
 
@@ -435,7 +450,8 @@ function missingList() {
    - Optional exhibition mock installation view.
    - Printed/digital ending-card mockups.
 
-5. Submission reflection details
+5. Optional strengthening
+   - Direct participant quotes or recorded workshop keywords, if available.
    - Your own wording for audience, context, format, and Radical Earth response.
    - Any citations or references from the source text / workshop.
 `;
