@@ -104,24 +104,26 @@ const sections = [
     <div class="col" data-anim>
       <div class="kicker">source base</div>
       <h2 class="h-md">Original Content</h2>
-      <p class="body-zh" style="font-size:1.03vw;line-height:1.62">[Assigned text title, author, source] + World Earth Day workshop research + climate tipping-point references.</p>
-      <p class="body-zh" style="font-size:1.03vw;line-height:1.62">The material frames Earth as a living system of thresholds, feedback loops and social consequences.</p>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55;font-weight:700">Radical Earth: Incubator for Utopian Publishing.</p>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55">Winchester School of Art, Department of Design, in conjunction with the Royal Society for Arts and the Future Cities Community Hub. World Earth Day, 21–22 April 2026.</p>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55">The brief frames Earth as a system of thresholds, feedback loops, and shared consequence — and asks how publishing might activate, rather than merely describe, ecological responsibility.</p>
       <div class="callout" style="padding:2vh 1.5vw"><span class="q-big" style="font-size:1.12vw">Tone: urgent, systemic, speculative, but not nihilistic.</span></div>
     </div>
     <div class="col" data-anim>
       <div class="kicker">interpretation</div>
       <h2 class="h-md">My Interpretation</h2>
-      <p class="body-zh" style="font-size:1.03vw;line-height:1.62">The source becomes a branching ecological story. Key ideas become reader prompts; recurring motifs become keywords; climate thresholds become Earth states; accumulated choices become personal ending cards.</p>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55">The brief becomes a branching ecological story. Its prompts become reader inputs; its motifs become keywords; climate thresholds become Earth states; accumulated choices become personal ending cards.</p>
       <p class="meta" style="margin-top:1.5vh">motifs</p>
-      <p class="body-zh" style="font-size:1.03vw;line-height:1.62">threshold · tipping point · heat · soil · river · waste · repair · archive · collective action</p>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55">threshold · tipping point · heat · soil · river · waste · repair · archive · collective action</p>
     </div>
     <div class="col" data-anim>
       <div class="kicker">editing decision</div>
       <h2 class="h-md">Strategy</h2>
-      <p class="body-zh" style="font-size:1.03vw;line-height:1.62">Use an intentional edited version. The assigned text is rewritten into five short interactive chapters, while external research supports the system logic.</p>
-      <div class="rowline" style="padding:1.3vh 0"><div class="k" style="font-size:1.25vw">Core 01</div><div class="v" style="font-size:.98vw">small repeated choices produce systemic consequences.</div><div class="m">choice</div></div>
-      <div class="rowline" style="padding:1.3vh 0"><div class="k" style="font-size:1.25vw">Core 02</div><div class="v" style="font-size:.98vw">climate futures are unequal; justice shapes who is protected.</div><div class="m">justice</div></div>
-      <div class="rowline" style="padding:1.3vh 0"><div class="k" style="font-size:1.25vw">Core 03</div><div class="v" style="font-size:.98vw">positive tipping points emerge through repair, sharing and care.</div><div class="m">repair</div></div>
+      <p class="body-zh" style="font-size:.88vw;line-height:1.55">Use an intentional edited version. The brief is rewritten as five short interactive chapters; external research supports the system logic.</p>
+      <div class="rowline" style="padding:1vh 0"><div class="k" style="font-size:1vw">Core 01</div><div class="v" style="font-size:.78vw">small repeated choices produce systemic consequences.</div><div class="m">choice</div></div>
+      <div class="rowline" style="padding:1vh 0"><div class="k" style="font-size:1vw">Core 02</div><div class="v" style="font-size:.78vw">climate futures are unequal; justice shapes who is protected.</div><div class="m">justice</div></div>
+      <div class="rowline" style="padding:1vh 0"><div class="k" style="font-size:1vw">Core 03</div><div class="v" style="font-size:.78vw">positive tipping points emerge through repair, sharing and care.</div><div class="m">repair</div></div>
+      <div class="rowline" style="padding:1vh 0"><div class="k" style="font-size:1vw">Core 04</div><div class="v" style="font-size:.78vw">publishing can be a participatory interface, not a fixed page.</div><div class="m">form</div></div>
     </div>
   </div>
   ${foot("source pack filled")}
